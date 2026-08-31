@@ -1,0 +1,24 @@
+kind = "web"
+previewPath = "/"
+title = "Mazzi Studios"
+version = "1.0.0"
+id = "artifacts/mazzi-studios"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23058
+
+[services.development]
+run = "pnpm --filter @workspace/mazzi-studios run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mazzi-studios", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mazzi-studios/dist/public"
+
+
+[services.env]
+PORT = "23058"
+BASE_PATH = "/"
