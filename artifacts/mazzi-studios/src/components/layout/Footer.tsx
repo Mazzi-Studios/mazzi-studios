@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Mail, MapPin } from 'lucide-react';
+import { serviceNavigation } from '@/data/services';
 
 export function Footer() {
   return (
@@ -21,7 +22,7 @@ export function Footer() {
               AI-Powered Marketing Leadership for Healthcare and B2B.
             </p>
             <div className="flex items-center gap-4 mt-2">
-              <a href="mailto:team@mazzistudios.com" className="text-[#cfcfcf] hover:text-[#EB2571] transition-colors">
+              <a href="mailto:ricardo@mazzistudios.com" className="text-[#cfcfcf] hover:text-[#EB2571] transition-colors">
                 <Mail size={20} />
               </a>
               <div className="flex items-center gap-1 text-[#cfcfcf]">
@@ -34,12 +35,9 @@ export function Footer() {
           {/* Services Col */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[#F5F0EB] font-semibold text-[13px] uppercase tracking-widest mb-2">Services</h4>
-            <Link href="/fractional-cmo" className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">Fractional CMO</Link>
-            <Link href="/ai-automation" className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">AI Automation</Link>
-            <Link href="/services#web" className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">Websites & Dev</Link>
-            <Link href="/services#linkedin" className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">LinkedIn Marketing</Link>
-            <Link href="/services#ppc" className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">PPC Management</Link>
-            <Link href="/services#strategy" className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">Strategy Sprints</Link>
+            {serviceNavigation.map((item) => (
+              <Link key={item.href} href={item.href} className="text-[#cfcfcf] hover:text-[#F5F0EB] text-[13px] uppercase tracking-widest transition-colors">{item.name}</Link>
+            ))}
           </div>
 
           {/* Company Col */}
@@ -84,7 +82,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <span className="text-[#cfcfcf] text-[13px] uppercase tracking-widest bg-[#0F0F1C] border border-[#EB2571]/15 px-3 py-1">AI-Powered</span>
-            <span className="text-[#cfcfcf] text-[13px] uppercase tracking-widest bg-[#0F0F1C] border border-[#EB2571]/15 px-3 py-1">HIPAA-Compliant Ready</span>
+            <span className="text-[#cfcfcf] text-[13px] uppercase tracking-widest bg-[#0F0F1C] border border-[#EB2571]/15 px-3 py-1">HIPAA-Aware Tracking</span>
           </div>
         </div>
       </div>

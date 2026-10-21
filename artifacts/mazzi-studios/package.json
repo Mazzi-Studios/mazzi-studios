@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
-    "build": "rm -rf dist && pnpm run build:client && pnpm run build:server && pnpm run prerender && pnpm run validate:seo && rm -rf dist/server",
+    "build": "rm -rf dist && pnpm run build:client && pnpm run build:server && pnpm run prerender && pnpm run validate:seo && pnpm run validate:work && pnpm run validate:services && rm -rf dist/server",
     "build:client": "vite build --config vite.config.ts",
     "build:server": "vite build --config vite.config.ts --ssr src/entry-server.tsx --outDir dist/server",
     "prerender": "node scripts/prerender.mjs",
-    "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
+    "serve": "node scripts/serve.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "validate:seo": "node scripts/validate-seo.mjs"
+    "validate:seo": "node scripts/validate-seo.mjs",
+    "validate:work": "node scripts/validate-work.mjs",
+    "validate:services": "node scripts/validate-services.mjs"
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.10.0",

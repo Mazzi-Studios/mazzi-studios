@@ -2,12 +2,36 @@ import { Head } from '@/components/seo/Head';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/animations/FadeUp';
 import { AnimatedCounter } from '@/components/animations/AnimatedCounter';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Bot, Target, Zap, Activity, Users, Star, BarChart3, LineChart, Mail, FileText, Clock } from 'lucide-react';
+import { ArrowRight, Bot, Target, Zap, Activity, Users, BarChart3, LineChart, Mail, FileText, Clock } from 'lucide-react';
 import { Link } from 'wouter';
 import { posts } from '@/data/posts';
 import { HeroBg } from '@/components/HeroBg';
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+
+const testimonials = [
+  {
+    quote:
+      'It is a pleasure working with Mazzi Studios and they have become an extension of our marketing team. They have been very responsive to our needs and their services have been great! I would recommend them to anyone looking to build a website for their business!',
+    author: 'Craig Neita',
+    role: 'CEO, Vascular Simulations',
+    initials: 'CN',
+  },
+  {
+    quote:
+      'I was referred to Ricardo by a friend to assist in the development of a website for my new business. He got the concept right out of the gate! He used vocabulary that I could understand and framed out the site in no time. The site is up and is amazing! He exceeded all my expectations even researching the most cost effective tool for email and social media campaigns.',
+    author: 'Anne Rojas',
+    role: 'President, Infinity Medical Education',
+    initials: 'AR',
+  },
+  {
+    quote:
+      'Working with Mazzi Studios was a great experience. Ricardo and Marilyn captured the essence of Tone-y-Bands and their work had an immediate impact on our inbound marketing and social media strategy, lead acquisition, and e-commerce sales. Provided great design and tech support. They are passionate about their customer service level, highly creative, and produce stunning photography. A dynamic team with a positive can do attitude that you will love to work with them. Highly recommended!',
+    author: 'Janice Haley',
+    role: 'CEO, ToneyBands.com',
+    initials: 'JH',
+  },
+];
 
 export default function Home() {
 
@@ -195,7 +219,7 @@ export default function Home() {
                 <Bot size={32} className="text-[#2AC4EA] mb-6" />
                 <h3 className="text-[20px] md:text-[24px] font-semibold text-[#F5F0EB] mb-4">AI Automation</h3>
                 <p className="text-[16px] text-[#cfcfcf] mb-8 leading-relaxed flex-1">
-                  Save 200+ hours monthly with custom AI workflows. Lead gen, content creation, and analytics on autopilot.
+                  Workflows and Claude setups that take routine work off your team.
                 </p>
                 <div className="flex flex-col gap-4 mt-auto border-t border-white/5 pt-4">
                   <Link href="/ai-automation" className="text-[#2AC4EA] font-bold uppercase tracking-widest text-[12px] hover:opacity-80 transition-opacity inline-flex items-center gap-2">
@@ -361,101 +385,28 @@ export default function Home() {
               className="w-full max-w-5xl mx-auto"
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2 h-full">
-                    <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8 flex flex-col h-full">
-                      <div className="flex gap-1 text-[#EB2571] mb-6">
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                      </div>
-                      <p className="text-[#cfcfcf] italic mb-8 flex-1 leading-relaxed">"Mazzi Studios completely transformed our go-to-market strategy. Having a fractional CMO gave us the senior leadership we needed without the $250k salary. The AI workflows they built save our team 20 hours a week."</p>
-                      <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
-                        <div className="h-10 w-10 bg-[#EB2571] flex items-center justify-center text-white font-bold shrink-0 text-sm">
-                          SM
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-[#F5F0EB] text-[15px]">Sarah M.</h4>
-                          <p className="text-[12px] uppercase tracking-widest text-[#cfcfcf]">CMO, HealthTech</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2 h-full">
-                    <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8 flex flex-col h-full">
-                      <div className="flex gap-1 text-[#EB2571] mb-6">
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                      </div>
-                      <p className="text-[#cfcfcf] italic mb-8 flex-1 leading-relaxed">"We were struggling to scale our lead generation until they implemented their AI Lead Gen Agent. It works 24/7, and our calendar is booked solid. They are genuine strategic partners."</p>
-                      <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
-                        <div className="h-10 w-10 bg-[#EB2571] flex items-center justify-center text-white font-bold shrink-0 text-sm">
-                          MR
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-[#F5F0EB] text-[15px]">Michael R.</h4>
-                          <p className="text-[12px] uppercase tracking-widest text-[#cfcfcf]">CEO, B2B SaaS</p>
-                        </div>
+                {testimonials.map((testimonial) => (
+                  <CarouselItem key={testimonial.author} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2 h-full">
+                      <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8 flex flex-col h-full">
+                        <div aria-hidden="true" className="text-[#EB2571] text-4xl leading-none mb-4">“</div>
+                        <p className="text-[#cfcfcf] italic mb-8 flex-1 leading-relaxed">{testimonial.quote}</p>
+                        <footer className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
+                          <div
+                            aria-hidden="true"
+                            className="h-10 w-10 bg-[#EB2571] flex items-center justify-center text-white font-bold shrink-0 text-sm"
+                          >
+                            {testimonial.initials}
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-[#F5F0EB] text-[15px]">{testimonial.author}</h4>
+                            <p className="text-[12px] uppercase tracking-widest text-[#cfcfcf]">{testimonial.role}</p>
+                          </div>
+                        </footer>
                       </div>
                     </div>
-                  </div>
                 </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2 h-full">
-                    <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8 flex flex-col h-full">
-                      <div className="flex gap-1 text-[#EB2571] mb-6">
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                      </div>
-                      <p className="text-[#cfcfcf] italic mb-8 flex-1 leading-relaxed">"Their deep understanding of healthcare marketing sets them apart. They navigated our complex compliance requirements while still delivering a 40% increase in patient acquisition."</p>
-                      <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
-                        <div className="h-10 w-10 bg-[#EB2571] flex items-center justify-center text-white font-bold shrink-0 text-sm">
-                          JL
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-[#F5F0EB] text-[15px]">Jennifer L.</h4>
-                          <p className="text-[12px] uppercase tracking-widest text-[#cfcfcf]">VP Mktg, Medical</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2 h-full">
-                    <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8 flex flex-col h-full">
-                      <div className="flex gap-1 text-[#EB2571] mb-6">
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                        <Star fill="currentColor" size={16} />
-                      </div>
-                      <p className="text-[#cfcfcf] italic mb-8 flex-1 leading-relaxed">"The combination of executive strategy and hands-on AI execution is unmatched. We hit our Q3 goals a month early thanks to their guidance."</p>
-                      <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
-                        <div className="h-10 w-10 bg-[#EB2571] flex items-center justify-center text-white font-bold shrink-0 text-sm">
-                          DK
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-[#F5F0EB] text-[15px]">David K.</h4>
-                          <p className="text-[12px] uppercase tracking-widest text-[#cfcfcf]">Founder, FinTech</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
+                ))}
               </CarouselContent>
               <div className="flex justify-center gap-4 mt-8">
                 <CarouselPrevious className="static transform-none border border-[#EB2571]/35 bg-transparent hover:bg-[#EB2571]/10 text-[#F5F0EB] rounded-none" />

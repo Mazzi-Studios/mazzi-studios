@@ -1,0 +1,5 @@
+- [Verify Git remote after Replit UI pushes](replit-git-remote-verification.md) — Replit's remote flow may create and select a different repository; verify origin and GitHub contents.
+- [Approved marketing claims](approved-marketing-claims.md) — use sourced, user-approved testimonials and outcome metrics; don't invent social proof.
+- [Contact form delivery](contact-form-delivery.md) — never report a message sent without real server-side delivery; use booking/email fallback if no sender is connected.
+- [Monorepo tooling compatibility](monorepo-tooling-compatibility.md) — check OpenAPI email validation and workspace-scoped package installs against installed tool versions.
+- [Preview browser testing](preview-browser-testing.md) — the development banner can block fixed-header clicks; hide it only inside standalone test contexts.

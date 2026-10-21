@@ -1,0 +1,103 @@
+Goal
+
+Case studies on /work and /work/[slug] no longer name the client. Real client brands appear only in a new logo section, "Brands We've Worked With." Results, numbers, layout and design stay exactly as they are.
+
+Rules
+Change only what this file lists. Do not rewrite, reorder or restyle anything else.
+Use the copy in this file word for word. Do not add numbers, names or claims.
+Never use em dash or en dash characters (U+2014, U+2013) anywhere, including alt text, meta tags and code comments.
+Do not publish. When done, list every file you changed and wait for my OK.
+1. Rename case studies and slugs
+Old title	New title	Old slug	New slug	New location
+Peptide Brand	(no change)	peptide-brand	(no change)	(no change)
+Contours	Body Contouring MedSpa	contours-medspa	body-contouring-medspa	Middle Tennessee
+Precision Clinical Research	Multi-Study Clinical Research Site	precision-clinical-research	multi-study-research-site	South Florida
+START Center for Cancer Research	Oncology Trial Network	start-center-for-cancer-research	oncology-trial-network	(no change)
+Cingo Column Wraps	Parking Media Startup	cingo-column-wraps	parking-media-startup	(no change)
+Canopy Cancer Collective × PanCAN	Pancreatic Cancer Awareness Campaign	canopy-cancer-collective	pancreatic-cancer-awareness-campaign	(no change)
+Atrium Wallcoverings	Commercial Wallcovering Supplier	atrium-wallcoverings	wallcovering-supplier	South Florida
+Carevive	Oncology Patient Experience Platform	carevive	oncology-patient-experience-platform	(no change)
+Purpose Life Sciences	Clinical Research Organization	purpose-life-sciences	clinical-research-organization	(no change)
+Add a 301 redirect from every old slug to its new slug.
+Update the sitemap, previous/next links, page titles ("[New title]: Case Study | Mazzi Studios"), any case study JSON-LD and every internal link to these pages. That includes the "SEE THE CASE STUDY" links on /services and on the 7 service pages (/fractional-cmo, /ai-automation, /seo-ai-search, /websites, /paid-media, /linkedin-outbound, /healthcare-marketing), and the homepage if it links to case studies.
+Display order and filter tabs stay the same.
+2. Copy replacements inside the case studies
+
+Replace each "Old" text with the "New" text. Everything else in each case study stays as is.
+
+Body Contouring MedSpa
+
+Old: "Contours had a strong offer" / New: "The studio had a strong offer"
+Old: "women 35 to 65 in Franklin and Nashville" / New: "women 35 to 65 in the Nashville area"
+
+Oncology Trial Network
+
+Card summary. Old: "for one of the largest community-based early-phase oncology trial networks in the U.S." / New: "for a national network of community-based early-phase oncology trial sites."
+Old: "START needed to reach" / New: "The network needed to reach"
+Old: "barely knew START existed" / New: "barely knew the network existed"
+Old: "We built START's SEO program" / New: "We built the network's SEO program"
+Old: "and START holds 53 top-3 Google positions" / New: "and the site holds 53 top-3 Google positions"
+Old: "START earns citations" / New: "The network earns citations"
+
+Parking Media Startup
+
+Hero metric label. Old: "Decision-makers who accepted a LinkedIn connection from Cingo's outbound" / New: "Decision-makers who accepted a LinkedIn connection through our outbound"
+Old: "Cingo sells something" / New: "The company sells something"
+
+Pancreatic Cancer Awareness Campaign
+
+Card summary. Old: "Marketing consultant support for a Canopy Cancer Collective and PanCAN initiative:" / New: "Marketing consultant support for a joint initiative of two national pancreatic cancer organizations:"
+Delete the sponsor line ("This program is made possible with funding support from our sponsor, AbbVie.") from the detail page.
+Hero metric label. Old: "Clinical experts on one program, from UC San Diego, UW / Fred Hutch, University of the Pacific, PanCAN and Canopy" / New: "Clinical experts from academic cancer centers and national patient organizations on one program"
+Old: "Canopy and PanCAN released a white paper, "From Overlooked to Essential," that many clinicians hadn't seen." / New: "Two national pancreatic cancer organizations released a clinical white paper that many clinicians hadn't seen."
+Old: "in Canopy's brand palette" / New: "in the client's brand palette"
+Old: "two emails for Canopy to send" / New: "two emails for the client to send"
+Old: "a designed summary brief for "Digesting the Evidence."" / New: "a designed summary brief for the symposium."
+
+Commercial Wallcovering Supplier
+
+Old: "Atrium needed to post them" / New: "The supplier needed to post them"
+
+Oncology Patient Experience Platform
+
+Card summary. Old: ", now Carevive by Health Catalyst." / New: ", now part of a national health technology company."
+Old: "Carevive builds clinically validated technology" / New: "The company builds clinically validated technology"
+Delete the sentence "Live at carevive.com."
+
+Clinical Research Organization
+
+Card summary. Old: "for an Impact Research Organization working to" / New: "for a mission-driven clinical research organization working to"
+Old: "Purpose Life Sciences had a strong vision" / New: "The organization had a strong vision"
+
+All case studies: rewrite any image alt text that contains a client name so it describes the image only.
+
+3. /work intro
+
+Add this sentence at the end of the current intro paragraph: "We keep client names off our case studies. The work and the numbers are real."
+
+4. Replace "More Website Builds" with "Brands We've Worked With"
+Delete the "More Website Builds" row.
+In its place on /work (below the case study grid, above "What Clients Say"), add a section titled Brands We've Worked With.
+Logo files: I've attached 12 files (11 trimmed transparent PNGs plus an SVG for Purpose Life Sciences). Save them in the project's assets folder under these names and use them exactly as supplied. Do not fetch logos from anywhere else, and do not redraw or approximate any logo.
+Logos, in this order (file name in brackets; use the SVG for Purpose Life Sciences):
+START Center for Cancer Research [start-center-for-cancer-research.png]
+Precision Clinical Research [precision-clinical-research.png]
+Carevive [carevive.png]
+Purpose Life Sciences [purpose-life-sciences.svg]
+Canopy Cancer Collective [canopy-cancer-collective.png]
+Contours [contours.png]
+Cingo [cingo.png]
+Atrium Wallcoverings [atrium-wallcoverings.png]
+3D MedSupply & Manufacturing [3d-medsupply.png]
+Infinity Medical Education [infinity-medical-education.png]
+ToneyBands [toneybands.png]
+Do NOT include PanCAN, AbbVie, Vascular Simulations or any peptide brand.
+Some logos are wide and some are square or stacked (START, Cingo, Canopy, Infinity). Size each by a max-height and max-width box so they look visually balanced, not by height alone.
+Style: logos in grayscale at a uniform height (about 40px desktop, 32px mobile), full color on hover, evenly spaced in a wrapping grid (4 per row desktop, 2 per row mobile). Logos are not links. Alt text: "[Brand name] logo".
+Keep the "What Clients Say" testimonials exactly as they are.
+5. Check your work
+Load /work, all 9 detail pages, /services and the 7 service pages on desktop and mobile. Every "SEE THE CASE STUDY" link must open the right page with no redirect hop.
+Visit each of the 8 old slugs and confirm a 301 to the new slug.
+Search the built output for these strings. Outside the logo section and the testimonials, every one must return zero results: "START Center", "startresearch", "Contours", "Cingo", "Precision Clinical", "Canopy", "PanCAN", "AbbVie", "Atrium", "Carevive", "Health Catalyst", "Purpose Life", "Impact Research Organization", "UC San Diego", "Fred Hutch", "Overlooked to Essential", "Digesting the Evidence", "Franklin".
+Search for U+2014 and U+2013. Zero results.
+List changed files. Do not publish.

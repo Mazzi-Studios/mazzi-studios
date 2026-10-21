@@ -1,0 +1,1057 @@
+{
+  "overview": {
+    "route": "/services",
+    "title": "Marketing Services & Pricing | Mazzi Studios",
+    "description": "Fractional CMO, AI automation, SEO and AI search, websites, paid media and LinkedIn outbound for healthcare, life sciences and B2B. Prices up front.",
+    "hero": {
+      "Eyebrow": "Services",
+      "H1": "Senior marketing leadership, with the systems to run it.",
+      "Subhead": "We plan the strategy, build the machinery and run it: campaigns, websites, tracking, CRM and AI workflows for healthcare, life sciences and B2B teams. Prices are on the page and results are on the Work page.",
+      "Buttons": "\"Book a Strategy Call\" (/contact) and \"See Our Work\" (/work)"
+    },
+    "differences": [
+      {
+        "heading": "Strategy and execution in one place.",
+        "body": "You don't hire a strategist and then hunt for someone to build what they recommend. The same person who sets the plan sets up the tracking, the CRM and the campaigns."
+      },
+      {
+        "heading": "AI-native from day one.",
+        "body": "We work with Claude, n8n and the tools you already use, so research, reporting and routine marketing tasks take hours instead of weeks."
+      },
+      {
+        "heading": "Numbers you can check.",
+        "body": "Every result we publish comes from a client's own ad accounts, CRM, analytics or patient database."
+      }
+    ],
+    "cards": [
+      {
+        "name": "Fractional CMO",
+        "summary": "Senior marketing leadership without a full-time hire.",
+        "proof": "Fractional CMO for a national oncology research network since 2024",
+        "price": "$7,500/mo",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "AI Automation & Claude Workflows",
+        "summary": "Workflows and Claude setups that take routine work off your team.",
+        "proof": "10+ AI automations running for one client",
+        "price": "$1,500 discovery",
+        "href": "/ai-automation"
+      },
+      {
+        "name": "SEO & AI Search",
+        "summary": "Rank on Google and get cited by ChatGPT, Perplexity and AI Overviews.",
+        "proof": "Domain Rating 10 to 34 in two years",
+        "price": "$2,500 audit",
+        "href": "/seo-ai-search"
+      },
+      {
+        "name": "Websites",
+        "summary": "Fast, conversion-focused sites you own outright.",
+        "proof": "123-pattern catalog the client updates in 15 minutes",
+        "price": "$2,500",
+        "href": "/websites"
+      },
+      {
+        "name": "Paid Media",
+        "summary": "Google, Meta and X campaigns with tracking you can trust.",
+        "proof": "$230K revenue in one month on $70K ad spend",
+        "price": "$1,500/mo + ad spend",
+        "href": "/paid-media"
+      },
+      {
+        "name": "LinkedIn & B2B Outbound",
+        "summary": "Content, outbound and CRM that turn LinkedIn into pipeline.",
+        "proof": "1,100+ decision-makers accepted outbound connections",
+        "price": "$1,500/mo",
+        "href": "/linkedin-outbound"
+      },
+      {
+        "name": "Healthcare & Clinical Research",
+        "summary": "Patient recruitment and HCP marketing built for health-ad rules.",
+        "proof": "562 new research patients from organic search in one year",
+        "price": "See each service",
+        "href": "/healthcare-marketing"
+      }
+    ],
+    "sprints": [
+      {
+        "name": "Marketing Diagnostic",
+        "price": "$2,500",
+        "details": "2 weeks. A full audit of your marketing, tracking and competitors, then a 90-day action plan presented live.",
+        "popular": false
+      },
+      {
+        "name": "Go-to-Market Sprint",
+        "price": "$7,500",
+        "details": "4 to 6 weeks. Market analysis, ICP development, positioning and messaging, launch timeline and budget map.",
+        "popular": false
+      }
+    ],
+    "sprintsNote": "Not sure where to start? Most clients start with the Diagnostic.",
+    "testimonial": {
+      "quote": "It is a pleasure working with Mazzi Studios and they have become an extension of our marketing team.",
+      "author": "Craig Neita",
+      "role": "CEO, Vascular Simulations"
+    },
+    "closing": {
+      "Heading": "Not sure which service fits?",
+      "Line": "Book a 30-minute call. We'll tell you what we'd do first, and what we wouldn't spend money on yet.",
+      "Button": "Book a Strategy Call"
+    }
+  },
+  "pages": [
+    {
+      "route": "/fractional-cmo",
+      "title": "Fractional CMO for Healthcare & B2B | Mazzi Studios",
+      "description": "Senior marketing leadership from $7,500/mo. Strategy, team and vendor management, tracking and reporting for healthcare, life sciences and B2B companies.",
+      "hero": {
+        "Eyebrow": "Fractional CMO",
+        "H1": "A senior marketing leader, without the full-time hire.",
+        "Subhead": "Strategy, budget, vendors, reporting and the systems underneath them, owned by one person who has run them for oncology research networks, MedSpas and e-commerce brands."
+      },
+      "proof": [
+        {
+          "value": "Since 2024",
+          "label": "Fractional CMO for a national oncology research network",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        },
+        {
+          "value": "10 to 34",
+          "label": "Domain Rating growth during the same engagement",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        },
+        {
+          "value": "86%",
+          "label": "Of MedSpa leads tied to the channel that produced them",
+          "caseStudy": "Body Contouring MedSpa",
+          "href": "/work/body-contouring-medspa"
+        }
+      ],
+      "audience": {
+        "intro": "Companies that need marketing leadership now and can't justify, or can't find, a full-time CMO:",
+        "items": [
+          "Healthcare practices, research sites and life sciences companies",
+          "B2B companies with a sales team but no marketing owner",
+          "Founder-led businesses whose marketing runs on vendors nobody manages",
+          "Teams with a marketing coordinator who needs direction"
+        ]
+      },
+      "included": [
+        {
+          "heading": "Strategy and budget.",
+          "body": "A channel plan and budget built on your numbers, reviewed monthly."
+        },
+        {
+          "heading": "Vendor and team management.",
+          "body": "We manage agencies, freelancers and in-house staff so work ships on time and to brief."
+        },
+        {
+          "heading": "Tracking and reporting.",
+          "body": "Conversion tracking, CRM source data and a monthly executive report that shows cost per lead, pipeline and what we're changing."
+        },
+        {
+          "heading": "Marketing operations.",
+          "body": "CRM setup, lead routing, email programs and automation, built or fixed hands-on."
+        },
+        {
+          "heading": "Go-to-market planning.",
+          "body": "Positioning, messaging and launch plans for new services, locations or products."
+        }
+      ],
+      "extras": [],
+      "process": [
+        {
+          "heading": "Download (weeks 1 to 2).",
+          "body": "We learn the business, audit every channel and the tracking behind it, and meet your team and vendors."
+        },
+        {
+          "heading": "Plan (weeks 3 to 4).",
+          "body": "A 90-day plan with priorities, budget and the 3 to 5 numbers we'll report on every week."
+        },
+        {
+          "heading": "Run (month 2 onward).",
+          "body": "Weekly working sessions, monthly executive reports and quarterly plan reviews."
+        }
+      ],
+      "processNote": "",
+      "pricing": [
+        {
+          "name": "Lite",
+          "price": "$7,500/mo",
+          "details": "About 10 hours a week. Strategy and channel plan, vendor management, weekly strategy session, monthly executive report.",
+          "popular": false
+        },
+        {
+          "name": "Growth",
+          "price": "$12,000/mo",
+          "details": "About 15 hours a week. Everything in Lite, plus go-to-market planning, brand strategy, marketing technology setup and hiring guidance.",
+          "popular": true
+        },
+        {
+          "name": "Full",
+          "price": "$20,000/mo",
+          "details": "About 20 hours a week, 12-month minimum. Everything in Growth, plus full ownership of the marketing function, sales and marketing alignment, and a seat in leadership meetings.",
+          "popular": false
+        }
+      ],
+      "pricingNote": "6-month minimum, except Full",
+      "pricingLine": "",
+      "pricingLinks": [],
+      "carePlans": [],
+      "faq": [
+        {
+          "question": "How is a fractional CMO different from an agency?",
+          "answer": "An agency sells you its services. A fractional CMO owns your results and decides which services you need, including whether you need an agency at all."
+        },
+        {
+          "question": "How fast will we see results?",
+          "answer": "The first 30 days fix tracking and remove waste, which often shows up in cost per lead quickly. Growth from new channels usually takes one to two quarters."
+        },
+        {
+          "question": "Do you work with our existing team and vendors?",
+          "answer": "Yes. Most engagements start by managing the people and vendors you already have."
+        },
+        {
+          "question": "Can we start smaller?",
+          "answer": "Yes. The Marketing Diagnostic ($2,500, 2 weeks) gives you an audit and a 90-day plan, and many clients start there."
+        },
+        {
+          "question": "Do you work in healthcare and HIPAA-sensitive settings?",
+          "answer": "Yes. We set up tracking and ad platforms so patient information stays out of them."
+        }
+      ],
+      "closing": {
+        "Heading": "Need a marketing leader this quarter?",
+        "Line": "Tell us where marketing stands today and we'll tell you what the first 90 days would look like.",
+        "Button": "Book a Strategy Call"
+      }
+    },
+    {
+      "route": "/ai-automation",
+      "title": "AI Marketing Automation & Claude Workflows | Mazzi Studios",
+      "description": "Custom n8n workflows and Claude setups for marketing teams: reporting, content, lead routing and CRM automation. Discovery from $1,500.",
+      "hero": {
+        "Eyebrow": "AI Automation & Claude Workflows",
+        "H1": "Put AI to work on the marketing tasks your team repeats every week.",
+        "Subhead": "We build workflows in n8n, HubSpot and Claude that pull your data, draft the content, route the leads and write the report, with a person approving anything that goes out."
+      },
+      "proof": [
+        {
+          "value": "10+",
+          "label": "AI automations and workflows running for an oncology research network",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        },
+        {
+          "value": "5",
+          "label": "Buying-signal workflows that send the right sales rep's email automatically",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        },
+        {
+          "value": "$2,315",
+          "label": "Revenue the ad account couldn't see, recovered by a nightly automated upload in its first week",
+          "caseStudy": "Peptide Brand",
+          "href": "/work/peptide-brand"
+        }
+      ],
+      "audience": {
+        "intro": "",
+        "items": [
+          "Marketing teams buried in reporting, list pulls and repetitive content",
+          "Sales teams that miss buying signals because nobody is watching for them",
+          "Companies that bought Claude or ChatGPT seats and aren't getting much from them",
+          "Healthcare organizations that want automation without putting patient data at risk"
+        ]
+      },
+      "included": [
+        {
+          "heading": "Reporting automation.",
+          "body": "Weekly reports pulled from your ad accounts, analytics and CRM, written up in plain English and sent to your inbox."
+        },
+        {
+          "heading": "Content workflows.",
+          "body": "Research and news feeds turned into draft blog posts and social content in your voice, queued for approval."
+        },
+        {
+          "heading": "Lead and sales automation.",
+          "body": "Buying signals, lead scoring and routing in your CRM, so the right person follows up at the right time."
+        },
+        {
+          "heading": "Claude for your team.",
+          "body": "Custom Claude skills written in your brand voice and processes, Claude connected to your Google Ads, Search Console, analytics and CRM, project setup and team training."
+        },
+        {
+          "heading": "Tracking automation.",
+          "body": "Server-side conversion tracking and offline conversion uploads, so ad platforms optimize on real sales."
+        }
+      ],
+      "extras": [
+        {
+          "heading": "How we use Claude",
+          "intro": "We run our own agency on Claude, so we build for clients what already works for us:",
+          "items": [
+            "Custom Claude skills for SEO audits, AI search visibility, structured data and ad account diagnostics",
+            "Claude connected directly to Google Ads and Search Console to read live account data",
+            "Claude working in the browser to research competitors, audit websites and pull platform data",
+            "Claude Code to design and build websites that hand off cleanly to the client"
+          ]
+        }
+      ],
+      "process": [
+        {
+          "heading": "Discovery.",
+          "body": "We map the tasks your team repeats, what each one costs in hours and which ones are safe to automate."
+        },
+        {
+          "heading": "Design.",
+          "body": "You approve each workflow on paper first: inputs, steps, approvals and outputs."
+        },
+        {
+          "heading": "Build and test.",
+          "body": "We build in your accounts, test with real data and fix what breaks."
+        },
+        {
+          "heading": "Launch and train.",
+          "body": "Your team learns to use and adjust it, followed by 30 days of support."
+        }
+      ],
+      "processNote": "",
+      "pricing": [
+        {
+          "name": "Discovery",
+          "price": "$1,500",
+          "details": "Process mapping and an automation plan. Credited toward your build if you go ahead.",
+          "popular": false
+        },
+        {
+          "name": "Starter Suite",
+          "price": "from $5,000",
+          "details": "2 weeks. 1 to 2 workflows, integration with your tools, 30-minute training, monthly monitoring.",
+          "popular": false
+        },
+        {
+          "name": "Growth Suite",
+          "price": "from $10,000",
+          "details": "4 weeks. 3 to 4 workflows, AI writing and analysis steps, a reporting dashboard, 60-minute training, weekly check-ins.",
+          "popular": true
+        },
+        {
+          "name": "Enterprise Suite",
+          "price": "from $15,000",
+          "details": "6+ weeks. 5 or more workflows across marketing and sales, HIPAA-aware workflow design and full team training.",
+          "popular": false
+        },
+        {
+          "name": "Ongoing support",
+          "price": "$500 to $2,500/mo",
+          "details": "Monitoring, updates and improvements after launch.",
+          "popular": false
+        }
+      ],
+      "pricingNote": "",
+      "pricingLine": "",
+      "pricingLinks": [],
+      "carePlans": [],
+      "faq": [
+        {
+          "question": "What tools do you build with?",
+          "answer": "n8n, HubSpot, Claude, Zapier when it's already in place, and the APIs of your ad, analytics and CRM platforms."
+        },
+        {
+          "question": "Do you build AI agents?",
+          "answer": "Yes. We build workflows and Claude setups that work through multi-step tasks on their own, with a person approving anything customer-facing."
+        },
+        {
+          "question": "Is it safe for healthcare data?",
+          "answer": "We design workflows so protected health information never passes through tools without a signed business associate agreement. When in doubt, we keep patient data out of the automation entirely."
+        },
+        {
+          "question": "Who owns the workflows?",
+          "answer": "You do. Everything is built in your accounts, and you keep it if we stop working together."
+        },
+        {
+          "question": "Can you set up Claude for our team?",
+          "answer": "Yes. That includes skills written for your processes, connections to your tools, and training so your team uses it every day."
+        }
+      ],
+      "closing": {
+        "Heading": "What does your team do every Monday that a workflow could do instead?",
+        "Line": "Start with a $1,500 discovery and get a plan you can use even if you build it yourself.",
+        "Button": "Book a Strategy Call"
+      }
+    },
+    {
+      "route": "/seo-ai-search",
+      "title": "SEO & AI Search Optimization (GEO/AEO) | Mazzi Studios",
+      "description": "Rank on Google and get cited by ChatGPT, Perplexity and Google AI Overviews. Technical SEO, content and AI search visibility. Audits from $2,500.",
+      "hero": {
+        "Eyebrow": "SEO & AI Search",
+        "H1": "Get found on Google and cited in AI answers.",
+        "Subhead": "Buyers now ask ChatGPT, Perplexity and Google's AI Overviews before they ever click a link. We build the authority, content and technical foundation that gets you named in both places."
+      },
+      "proof": [
+        {
+          "value": "10 to 34",
+          "label": "Ahrefs Domain Rating in two years",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        },
+        {
+          "value": "1,100+",
+          "label": "New referring domains",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        },
+        {
+          "value": "53",
+          "label": "Top-3 Google rankings, up from 12",
+          "caseStudy": "Oncology Trial Network",
+          "href": "/work/oncology-trial-network"
+        }
+      ],
+      "audience": {
+        "intro": "",
+        "items": [
+          "Companies that rank on Google but never come up in AI answers",
+          "Healthcare and research organizations competing with large institutions for search visibility",
+          "E-commerce brands that can't rely on paid ads alone",
+          "Anyone whose website traffic is flat while competitors keep showing up"
+        ]
+      },
+      "included": [
+        {
+          "heading": "AI visibility baseline.",
+          "body": "We test the real questions your buyers ask across Google AI Overviews, ChatGPT and Perplexity and record who gets cited."
+        },
+        {
+          "heading": "Technical SEO.",
+          "body": "Indexing, site structure, page speed, schema markup and AI crawler access, fixed in priority order."
+        },
+        {
+          "heading": "Authority building.",
+          "body": "Referring domains, listings and third-party mentions that search engines and AI models trust."
+        },
+        {
+          "heading": "Citable content.",
+          "body": "Pages built to be quoted: clear answers, original data, FAQs and expert authorship."
+        },
+        {
+          "heading": "Monthly measurement.",
+          "body": "Rankings, organic traffic, AI citations and leads from search, in one report."
+        }
+      ],
+      "extras": [],
+      "process": [
+        {
+          "heading": "Audit (weeks 1 to 2).",
+          "body": "Technical audit, AI visibility baseline and competitor gap analysis."
+        },
+        {
+          "heading": "Trust (weeks 3 to 6).",
+          "body": "Fix technical issues, structured data and authority signals."
+        },
+        {
+          "heading": "Scale (weeks 7 to 10).",
+          "body": "Publish and improve the pages most likely to rank and be cited."
+        },
+        {
+          "heading": "Signal (weeks 11 to 13).",
+          "body": "Build mentions and links, then re-test AI visibility against the baseline."
+        }
+      ],
+      "processNote": "based on our 90-Day GEO/AEO Playbook",
+      "pricing": [
+        {
+          "name": "AI Search Audit",
+          "price": "$2,500",
+          "details": "2 weeks. Technical audit, AI visibility baseline across ChatGPT, Perplexity, Google AI Mode and Claude, competitor gap analysis and a prioritized fix plan.",
+          "popular": false
+        },
+        {
+          "name": "SEO & AI Search Program",
+          "price": "from $3,500/mo",
+          "details": "13-week minimum. The full framework: technical fixes, content, authority building and monthly reporting.",
+          "popular": true
+        }
+      ],
+      "pricingNote": "",
+      "pricingLine": "",
+      "pricingLinks": [],
+      "carePlans": [],
+      "faq": [
+        {
+          "question": "What is GEO or AEO?",
+          "answer": "Generative engine optimization and answer engine optimization. Both mean making your business the source that AI tools like ChatGPT, Perplexity and Google AI Overviews quote when someone asks a question in your field."
+        },
+        {
+          "question": "Is SEO still worth it if people use AI search?",
+          "answer": "Yes. AI tools pull heavily from pages that already rank and carry authority, so strong SEO is the foundation of AI visibility."
+        },
+        {
+          "question": "How long does it take?",
+          "answer": "Technical fixes can show up within weeks. Authority and rankings build over months, which is why the program runs a 13-week minimum."
+        },
+        {
+          "question": "How do you measure AI visibility?",
+          "answer": "We run the same set of buyer questions across AI engines at the start and end of each cycle and track how often you're cited."
+        },
+        {
+          "question": "What's the difference between the playbook and your program?",
+          "answer": "The playbook is the 90-day system you run yourself for $197. The program is the same system, run by us, with the technical work, content and reporting done for you."
+        }
+      ],
+      "closing": {
+        "Heading": "Find out whether AI search knows you exist.",
+        "Line": "The AI Search Audit shows where you're cited, where competitors are cited instead and what to fix first.",
+        "Button": "Book a Strategy Call"
+      }
+    },
+    {
+      "route": "/websites",
+      "title": "Website Design & Development from $2,500 | Mazzi Studios",
+      "description": "Fast, conversion-focused websites for healthcare, life sciences and B2B, built so your team can update them. You own the code and hosting. From $2,500.",
+      "hero": {
+        "Eyebrow": "Websites",
+        "H1": "Websites that convert, and that your team can actually update.",
+        "Subhead": "WordPress, WooCommerce and modern custom builds, set up with tracking from day one and handed over so you own everything."
+      },
+      "proof": [
+        {
+          "value": "123",
+          "label": "Patterns in a custom catalog the client updates on its own",
+          "caseStudy": "Commercial Wallcovering Supplier",
+          "href": "/work/wallcovering-supplier"
+        },
+        {
+          "value": "15 min",
+          "label": "For the client's team to publish a new pattern, no developer needed",
+          "caseStudy": "Commercial Wallcovering Supplier",
+          "href": "/work/wallcovering-supplier"
+        },
+        {
+          "value": "2",
+          "label": "Buyer audiences served by one website: clinicians and health system leaders",
+          "caseStudy": "Oncology Patient Experience Platform",
+          "href": "/work/oncology-patient-experience-platform"
+        }
+      ],
+      "audience": {
+        "intro": "",
+        "items": [
+          "Businesses whose site looks dated or doesn't explain what they do",
+          "Teams that wait on a developer for every small change",
+          "Healthcare and life sciences companies that need to speak to more than one audience",
+          "E-commerce brands moving to WooCommerce or Shopify"
+        ]
+      },
+      "included": [
+        {
+          "heading": "Strategy and copy.",
+          "body": "Messaging, page structure and copy written for the buyer, not just the design."
+        },
+        {
+          "heading": "Design and build.",
+          "body": "Mobile-first design in WordPress, WooCommerce, Shopify or a modern custom stack."
+        },
+        {
+          "heading": "Tracking from launch.",
+          "body": "Analytics, conversion tracking and form source capture working on day one."
+        },
+        {
+          "heading": "SEO and AI search foundations.",
+          "body": "Clean structure, schema markup and fast load times built in."
+        },
+        {
+          "heading": "Training and handoff.",
+          "body": "A plain-English guide and a walkthrough, so your team can update pages on its own."
+        }
+      ],
+      "extras": [
+        {
+          "heading": "You own it",
+          "intro": "Every site is handed over in your name: your domain, your hosting, your code. Choose a site your team manages itself, or a care plan where we keep it updated for you.",
+          "items": []
+        }
+      ],
+      "process": [
+        {
+          "heading": "Discovery.",
+          "body": "Goals, audiences, competitors and the content you have."
+        },
+        {
+          "heading": "Structure and copy.",
+          "body": "Sitemap, wireframes and copy for approval."
+        },
+        {
+          "heading": "Design and build.",
+          "body": "Full build with tracking, tested on every device."
+        },
+        {
+          "heading": "Launch and handoff.",
+          "body": "Go live, training and a written how-to guide."
+        }
+      ],
+      "processNote": "",
+      "pricing": [
+        {
+          "name": "Landing Page",
+          "price": "$1,500",
+          "details": "5 to 7 days. One high-converting page for a campaign or offer.",
+          "popular": false
+        },
+        {
+          "name": "Starter Site",
+          "price": "$2,500",
+          "details": "2 weeks. Up to 5 pages.",
+          "popular": false
+        },
+        {
+          "name": "Website Refresh",
+          "price": "$3,500",
+          "details": "2 to 3 weeks. New design for your home page plus 5 pages.",
+          "popular": false
+        },
+        {
+          "name": "Business Site",
+          "price": "$5,000",
+          "details": "3 to 4 weeks. Up to 10 pages.",
+          "popular": true
+        },
+        {
+          "name": "E-Commerce Store",
+          "price": "$7,500",
+          "details": "4 to 5 weeks. Shopify or WooCommerce, up to 50 products.",
+          "popular": false
+        },
+        {
+          "name": "Growth Site",
+          "price": "$8,500",
+          "details": "4 to 6 weeks. Up to 20 pages plus a landing page.",
+          "popular": false
+        }
+      ],
+      "pricingNote": "",
+      "pricingLine": "",
+      "pricingLinks": [],
+      "carePlans": [
+        {
+          "name": "Essential",
+          "price": "$150/mo",
+          "details": "Updates, backups, uptime monitoring, 30 minutes of support.",
+          "popular": false
+        },
+        {
+          "name": "Growth",
+          "price": "$350/mo",
+          "details": "Everything in Essential, plus SEO monitoring, security and 1 hour of support.",
+          "popular": false
+        },
+        {
+          "name": "Premium",
+          "price": "$750/mo",
+          "details": "Everything in Growth, plus content updates, conversion tracking and priority support.",
+          "popular": false
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which platform will you use?",
+          "answer": "Usually WordPress for content-led sites, WooCommerce or Shopify for stores, and a custom build when the project needs it. We recommend one after discovery."
+        },
+        {
+          "question": "Who owns the website?",
+          "answer": "You do. The domain, hosting and code are in your name from launch."
+        },
+        {
+          "question": "Can my team update it without a developer?",
+          "answer": "Yes. Every site comes with training and a written guide."
+        },
+        {
+          "question": "Do you write the copy?",
+          "answer": "Yes. Copy and page structure are part of every build."
+        }
+      ],
+      "closing": {
+        "Heading": "Ready for a site that does more than sit there?",
+        "Button": "Book a Strategy Call"
+      }
+    },
+    {
+      "route": "/paid-media",
+      "title": "PPC Management: Google, Meta & X Ads | Mazzi Studios",
+      "description": "Google, Meta and X ad management with server-side conversion tracking, so you pay for results you can see. From $1,500/mo plus ad spend.",
+      "hero": {
+        "Eyebrow": "Paid Media",
+        "H1": "Ad spend that reports to real revenue.",
+        "Subhead": "Google, Meta and X campaigns built on tracking you can trust, including in restricted categories where the platforms make it hard."
+      },
+      "proof": [
+        {
+          "value": "$230K",
+          "label": "Revenue in a single month on $70K in ad spend",
+          "caseStudy": "Peptide Brand",
+          "href": "/work/peptide-brand"
+        },
+        {
+          "value": "2.83x",
+          "label": "Google Performance Max ROAS across 956 conversions",
+          "caseStudy": "Peptide Brand",
+          "href": "/work/peptide-brand"
+        },
+        {
+          "value": "24%",
+          "label": "Lower cost per click from one tested change to ad copy",
+          "caseStudy": "Peptide Brand",
+          "href": "/work/peptide-brand"
+        }
+      ],
+      "audience": {
+        "intro": "",
+        "items": [
+          "Businesses spending on ads without knowing which campaigns produce sales",
+          "E-commerce brands in restricted or policy-heavy categories",
+          "Healthcare advertisers who need patient-safe tracking",
+          "Teams ready to scale spend once the numbers hold up"
+        ]
+      },
+      "included": [
+        {
+          "heading": "Tracking first.",
+          "body": "Server-side conversion tracking and offline uploads, so platforms optimize on real sales."
+        },
+        {
+          "heading": "Campaign build.",
+          "body": "Google Search, Performance Max and Shopping, Meta, X and Microsoft Ads."
+        },
+        {
+          "heading": "Feed management.",
+          "body": "Merchant Center feed audits and fixes for e-commerce."
+        },
+        {
+          "heading": "Creative testing.",
+          "body": "Structured A/B tests that settle what works with data."
+        },
+        {
+          "heading": "Reporting.",
+          "body": "Spend, cost per lead or purchase and return, checked against your CRM or store data."
+        }
+      ],
+      "extras": [],
+      "process": [
+        {
+          "heading": "Audit.",
+          "body": "Account, tracking and feed review before any new spend."
+        },
+        {
+          "heading": "Fix and launch.",
+          "body": "Repair tracking, restructure campaigns and launch."
+        },
+        {
+          "heading": "Optimize.",
+          "body": "Regular bid, budget, audience and creative changes."
+        },
+        {
+          "heading": "Scale.",
+          "body": "Increase budget only while return holds."
+        }
+      ],
+      "processNote": "",
+      "pricing": [
+        {
+          "name": "Starter",
+          "price": "$1,500/mo",
+          "details": "Ad spend up to $5K/mo. One platform (Google or Meta), bi-weekly optimization, monthly reporting.",
+          "popular": false
+        },
+        {
+          "name": "Growth",
+          "price": "$2,500/mo",
+          "details": "Ad spend $5K to $15K/mo. Google and Meta, retargeting, A/B testing, bi-weekly reporting.",
+          "popular": true
+        },
+        {
+          "name": "Scale",
+          "price": "$4,000/mo",
+          "details": "Ad spend $15K+/mo. Full funnel across Google, Meta and LinkedIn, conversion rate recommendations, weekly optimization.",
+          "popular": false
+        }
+      ],
+      "pricingNote": "management fee; ad spend is paid directly to the platforms",
+      "pricingLine": "",
+      "pricingLinks": [],
+      "carePlans": [],
+      "faq": [
+        {
+          "question": "Is ad spend included?",
+          "answer": "No. Ad spend is billed by the platforms directly to your card. Our fee covers strategy, management and reporting."
+        },
+        {
+          "question": "Can you advertise in restricted categories?",
+          "answer": "Yes. We've run campaigns in categories where Google Search ads, Meta and TikTok are closed, by focusing on the channels and formats that do approve."
+        },
+        {
+          "question": "Do you work with HIPAA-sensitive accounts?",
+          "answer": "Yes. We set up tracking so patient information is never sent to ad platforms."
+        },
+        {
+          "question": "How soon will we see results?",
+          "answer": "Tracking fixes show up first, because the platforms start seeing sales they were missing. We scale spend only after the campaigns have enough conversion data to hold their return."
+        }
+      ],
+      "closing": {
+        "Heading": "Not sure your ad platforms see your real sales?",
+        "Line": "Most accounts we audit have a tracking gap. We'll find yours.",
+        "Button": "Book a Strategy Call"
+      }
+    },
+    {
+      "route": "/linkedin-outbound",
+      "title": "LinkedIn Marketing & B2B Outbound | Mazzi Studios",
+      "description": "LinkedIn content, outbound campaigns and CRM setup that turn B2B audiences into conversations. From $1,500/mo.",
+      "hero": {
+        "Eyebrow": "LinkedIn & B2B Outbound",
+        "H1": "Turn LinkedIn into conversations with the people who buy.",
+        "Subhead": "Executive content, outbound campaigns built for one buyer at a time and a CRM that catches every reply."
+      },
+      "proof": [
+        {
+          "value": "1,100+",
+          "label": "Decision-makers accepted outbound LinkedIn connections",
+          "caseStudy": "Parking Media Startup",
+          "href": "/work/parking-media-startup"
+        },
+        {
+          "value": "46.5%",
+          "label": "Connection acceptance rate from one targeted audience, with a 10.7% reply rate",
+          "caseStudy": "Parking Media Startup",
+          "href": "/work/parking-media-startup"
+        },
+        {
+          "value": "40",
+          "label": "Qualified leads at a trade show booth in a day and a half",
+          "caseStudy": "Parking Media Startup",
+          "href": "/work/parking-media-startup"
+        }
+      ],
+      "audience": {
+        "intro": "",
+        "items": [
+          "B2B companies selling to a defined list of decision-makers",
+          "Founders and executives who should be posting but aren't",
+          "Companies heading to conferences with no plan to follow up",
+          "Teams whose CRM is a list nobody works"
+        ]
+      },
+      "included": [
+        {
+          "heading": "Executive content.",
+          "body": "Posts and articles written in your voice and approved before they publish."
+        },
+        {
+          "heading": "Outbound campaigns.",
+          "body": "LinkedIn sequences built for one buyer type at a time, each pointing to a page made for that audience."
+        },
+        {
+          "heading": "CRM setup.",
+          "body": "Separate paths for cold leads and engaged contacts, with automatic follow-up journeys."
+        },
+        {
+          "heading": "Conference programs.",
+          "body": "Attendee lists loaded and sequenced before the show, with follow-up after it."
+        },
+        {
+          "heading": "Reporting.",
+          "body": "Acceptance rates, replies and meetings by audience."
+        }
+      ],
+      "extras": [],
+      "process": [
+        {
+          "heading": "Audience map.",
+          "body": "Define the buyer types and build the lists."
+        },
+        {
+          "heading": "Message and content.",
+          "body": "Write the profile, posts and outbound sequences."
+        },
+        {
+          "heading": "Launch.",
+          "body": "Start campaigns one audience at a time."
+        },
+        {
+          "heading": "Learn and scale.",
+          "body": "Move effort to the audiences that reply."
+        }
+      ],
+      "processNote": "",
+      "pricing": [
+        {
+          "name": "Starter",
+          "price": "$1,500/mo",
+          "details": "3-month minimum. 8 posts a month, profile optimization, content calendar.",
+          "popular": false
+        },
+        {
+          "name": "Authority Builder",
+          "price": "$3,500/mo",
+          "details": "6-month minimum. 12 posts and 2 carousels a month, engagement management, connection strategy.",
+          "popular": true
+        },
+        {
+          "name": "Executive",
+          "price": "$6,000/mo",
+          "details": "6-month minimum. 20 posts a month, ghostwritten articles, outbound lead generation and a newsletter.",
+          "popular": false
+        }
+      ],
+      "pricingNote": "minimums apply",
+      "pricingLine": "",
+      "pricingLinks": [],
+      "carePlans": [],
+      "faq": [
+        {
+          "question": "Will it sound like me?",
+          "answer": "Yes. We learn your voice from your own writing and you approve everything before it goes live."
+        },
+        {
+          "question": "Is LinkedIn automation safe for my account?",
+          "answer": "We keep sending volumes conservative and watch pending invitations, which is what LinkedIn uses to limit accounts."
+        },
+        {
+          "question": "What CRM do you work with?",
+          "answer": "HubSpot, Insightly and most CRMs that connect to email and LinkedIn tools."
+        },
+        {
+          "question": "How fast does outbound work?",
+          "answer": "Connection acceptances show up within days of launch. How quickly they turn into meetings depends on the audience and the offer, which is why we report replies and meetings by audience from the start."
+        }
+      ],
+      "closing": {
+        "Heading": "Who are the 500 people you most want to talk to?",
+        "Line": "We'll show you how we'd reach them.",
+        "Button": "Book a Strategy Call"
+      }
+    },
+    {
+      "route": "/healthcare-marketing",
+      "title": "Healthcare & Clinical Research Marketing | Mazzi Studios",
+      "description": "Patient recruitment, HCP marketing and HIPAA-aware tracking for research sites, oncology networks, life sciences companies and MedSpas.",
+      "hero": {
+        "Eyebrow": "Healthcare & Clinical Research",
+        "H1": "Marketing that fills studies, reaches clinicians and plays by health-ad rules.",
+        "Subhead": "Patient recruitment, physician and sponsor marketing, and tracking that keeps patient data out of ad platforms, from a team that has worked inside research sites and oncology networks."
+      },
+      "proof": [
+        {
+          "value": "562",
+          "label": "New research patients from organic search in one year",
+          "caseStudy": "Multi-Study Clinical Research Site",
+          "href": "/work/multi-study-research-site"
+        },
+        {
+          "value": "1,339",
+          "label": "New patients tracked to their source in one year",
+          "caseStudy": "Multi-Study Clinical Research Site",
+          "href": "/work/multi-study-research-site"
+        },
+        {
+          "value": "5",
+          "label": "Clinical experts on one national awareness program",
+          "caseStudy": "Pancreatic Cancer Awareness Campaign",
+          "href": "/work/pancreatic-cancer-awareness-campaign"
+        }
+      ],
+      "audience": {
+        "intro": "",
+        "items": [
+          "Clinical research sites that need steady enrollment across studies",
+          "Oncology networks and life sciences companies marketing to sponsors and physicians",
+          "Patient advocacy and nonprofit health organizations running awareness campaigns",
+          "MedSpas and specialty practices that need leads they can trace to a channel"
+        ]
+      },
+      "included": [
+        {
+          "heading": "Patient recruitment.",
+          "body": "Study-specific campaigns, SEO and SMS to existing patients, with every new patient tagged to its source."
+        },
+        {
+          "heading": "Physician and sponsor marketing.",
+          "body": "HCP email programs, LinkedIn and paid search aimed at the people who refer and fund."
+        },
+        {
+          "heading": "Compliant creative.",
+          "body": "Ads and posts written to platform health-ad rules and reviewed for medical accuracy."
+        },
+        {
+          "heading": "HIPAA-aware tracking.",
+          "body": "Analytics and ad tracking set up so protected health information stays out of ad platforms."
+        },
+        {
+          "heading": "Campaigns and events.",
+          "body": "Awareness campaigns, symposiums and webinars with clear reporting."
+        }
+      ],
+      "extras": [],
+      "process": [
+        {
+          "heading": "Audit.",
+          "body": "Channels, tracking, consent and data flows reviewed for risk and waste."
+        },
+        {
+          "heading": "Plan.",
+          "body": "A plan by audience: patients, physicians, sponsors."
+        },
+        {
+          "heading": "Run.",
+          "body": "Campaigns, content and automation, with weekly source reporting."
+        }
+      ],
+      "processNote": "",
+      "pricing": [],
+      "pricingNote": "",
+      "pricingLine": "Healthcare work uses the pricing on each service page. Most clients start with a Marketing Diagnostic at $2,500.",
+      "pricingLinks": [
+        {
+          "name": "Fractional CMO",
+          "href": "/fractional-cmo"
+        },
+        {
+          "name": "SEO & AI Search",
+          "href": "/seo-ai-search"
+        },
+        {
+          "name": "Paid Media",
+          "href": "/paid-media"
+        },
+        {
+          "name": "AI Automation",
+          "href": "/ai-automation"
+        }
+      ],
+      "carePlans": [],
+      "faq": [
+        {
+          "question": "Can you advertise clinical trials on Meta and Google?",
+          "answer": "Yes, within each platform's health and clinical trial rules. We write qualifying questions in plain language and avoid claims the platforms reject."
+        },
+        {
+          "question": "How do you handle HIPAA?",
+          "answer": "We keep protected health information out of ad pixels and third-party tools, review tracking scripts on patient-facing pages and only use vendors that will sign a business associate agreement where one is needed."
+        },
+        {
+          "question": "Do you work with sponsors and CROs too?",
+          "answer": "Yes. We market research networks to biotech and pharma sponsors as well as to patients."
+        }
+      ],
+      "closing": {
+        "Heading": "Need more patients, physicians or sponsors?",
+        "Button": "Book a Strategy Call"
+      }
+    }
+  ]
+}

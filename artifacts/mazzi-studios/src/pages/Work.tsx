@@ -3,7 +3,8 @@ import { Link } from 'wouter';
 import { ArrowRight } from 'lucide-react';
 import { Head } from '@/components/seo/Head';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/animations/FadeUp';
-import { caseStudies, WORK_FILTERS } from '@/data/caseStudies';
+import { BrandsWorkedWith } from '@/components/BrandsWorkedWith';
+import { caseStudies, WORK_FILTERS, workTestimonials } from '@/data/caseStudies';
 
 export default function Work() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -17,7 +18,7 @@ export default function Work() {
     <>
       <Head
         title="Our Work: Case Studies | Mazzi Studios"
-        description="Real results for real clients. Explore how Mazzi Studios has driven growth for MedSpas, B2B SaaS companies, and healthcare groups across the US."
+        description="Real results for clinical research sites, MedSpas, life sciences and B2B brands: revenue, patients and pipeline traced to their source."
       />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
@@ -47,9 +48,7 @@ export default function Work() {
               className="text-lg max-w-2xl leading-relaxed"
               style={{ color: '#cfcfcf' }}
             >
-              We don't believe in vanity metrics. Every case study here is built around
-              pipeline, revenue, and patient volume. The numbers that actually matter to
-              growing businesses.
+              No vanity metrics and no borrowed numbers. Every result below comes from the client's own sales records, ad accounts, CRM or patient database. Where a project is still in motion, we say so. We keep client names off our case studies. The work and the numbers are real.
             </p>
           </FadeUp>
 
@@ -60,6 +59,7 @@ export default function Work() {
                 <button
                   key={f}
                   onClick={() => setActiveFilter(f)}
+                  aria-pressed={activeFilter === f}
                   className="text-[11px] uppercase tracking-widest font-semibold px-4 py-2 transition-all duration-200"
                   style={{
                     background:
@@ -118,7 +118,8 @@ export default function Work() {
                     <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
                       <img
                         src={cs.heroImage}
-                        alt={cs.client}
+                        alt={cs.heroImageAlt}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       {/* Overlay gradient */}
@@ -147,7 +148,7 @@ export default function Work() {
                         {cs.location}
                       </p>
                       <h2
-                        className="font-['Bebas_Neue'] text-3xl leading-tight mb-3 transition-colors duration-200 group-hover:text-[#EB2571]"
+                        className="font-['Bebas_Neue'] text-3xl leading-tight mb-3 break-words transition-colors duration-200 group-hover:text-[#EB2571]"
                         style={{ color: '#F5F0EB' }}
                       >
                         {cs.client}
@@ -164,10 +165,10 @@ export default function Work() {
                         className="grid grid-cols-2 gap-px mb-5"
                         style={{ border: '1px solid rgba(255,255,255,0.07)' }}
                       >
-                        {cs.results.slice(0, 2).map((r) => (
+                        {cs.heroMetrics.map((r) => (
                           <div
                             key={r.label}
-                            className="p-3"
+                            className="p-3 min-w-0"
                             style={{ background: 'rgba(8,8,16,0.6)' }}
                           >
                             <p
@@ -175,10 +176,9 @@ export default function Work() {
                               style={{ color: '#EB2571' }}
                             >
                               {r.value}
-                              {r.suffix}
                             </p>
                             <p
-                              className="text-[10px] uppercase tracking-wide leading-tight"
+                              className="text-[10px] uppercase tracking-wide leading-tight break-words"
                               style={{ color: '#cfcfcf' }}
                             >
                               {r.label}
@@ -189,7 +189,7 @@ export default function Work() {
 
                       {/* Service tags */}
                       <div className="flex flex-wrap gap-1.5 mb-5">
-                        {cs.services.slice(0, 3).map((s) => (
+                        {cs.services.map((s) => (
                           <span
                             key={s}
                             className="text-[10px] uppercase tracking-wide px-2.5 py-1 font-medium"
@@ -202,14 +202,6 @@ export default function Work() {
                             {s}
                           </span>
                         ))}
-                        {cs.services.length > 3 && (
-                          <span
-                            className="text-[10px] uppercase tracking-wide px-2.5 py-1"
-                            style={{ color: '#cfcfcf' }}
-                          >
-                            +{cs.services.length - 3} more
-                          </span>
-                        )}
                       </div>
 
                       {/* CTA row */}
@@ -240,6 +232,33 @@ export default function Work() {
               </div>
             </FadeUp>
           )}
+        </div>
+      </section>
+
+      {/* Brands We've Worked With */}
+      <BrandsWorkedWith />
+
+      {/* What Clients Say */}
+      <section className="py-24 px-4 bg-[#0D0D1A] border-t border-white/5" data-work-testimonials>
+        <div className="container mx-auto max-w-5xl">
+          <FadeUp className="text-center mb-16 flex flex-col items-center">
+            <div className="w-12 h-[1px] bg-[#EB2571]/40 mb-6"></div>
+            <h2 className="text-[36px] md:text-[48px] font-bold text-[#F5F0EB] tracking-tight">What Clients Say</h2>
+          </FadeUp>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {workTestimonials.map((t) => (
+              <StaggerItem key={t.author}>
+                <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8 flex flex-col h-full">
+                  <div aria-hidden="true" className="text-[#EB2571] text-4xl leading-none mb-4">“</div>
+                  <p className="text-[#cfcfcf] italic mb-8 flex-1 leading-relaxed">{t.quote}</p>
+                  <footer className="mt-auto border-t border-white/5 pt-6">
+                    <h4 className="font-semibold text-[#F5F0EB] text-[15px]">{t.author}</h4>
+                    <p className="text-[12px] uppercase tracking-widest text-[#cfcfcf]">{t.role}</p>
+                  </footer>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 

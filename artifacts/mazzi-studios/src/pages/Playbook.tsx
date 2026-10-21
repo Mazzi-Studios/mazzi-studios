@@ -359,7 +359,24 @@ export default function Playbook() {
         </div>
       </section>
 
-      {/* ── ABOUT — WHITE ── */}
+      <section className="py-12 bg-[#080810]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <FadeUp>
+            <h2 className="font-['Bebas_Neue'] font-normal text-[#F5F0EB] text-[36px] mb-4">
+              Rather have us run it?
+            </h2>
+            <p className="text-[16px] text-[#cfcfcf] leading-relaxed mb-6">
+              We run the same 90-day playbook for clients, starting with a $2,500 AI Search Audit.
+            </p>
+            <Link href="/seo-ai-search"
+              className="inline-block font-bold uppercase tracking-widest text-[13px] text-white px-10 py-4 transition-opacity hover:opacity-85"
+              style={{ background: '#EB2571', borderRadius: 0 }}>
+              See SEO &amp; AI Search Services
+            </Link>
+          </FadeUp>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <FadeUp>

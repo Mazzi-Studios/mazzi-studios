@@ -1,7 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { Route, Switch, Router as WouterRouter, Redirect } from 'wouter';
+import portfolioRedirects from '@/data/portfolioRedirects.json';
 import { AppLayout } from '@/components/layout/AppLayout';
 
 // Pages
@@ -10,6 +11,8 @@ import About from '@/pages/About';
 import Services from '@/pages/Services';
 import FractionalCMO from '@/pages/FractionalCMO';
 import AIAutomation from '@/pages/AIAutomation';
+import ServicePage from '@/pages/ServicePage';
+import { servicePages } from '@/data/services';
 import Blog from '@/pages/Blog';
 import BlogPost from '@/pages/BlogPost';
 import Contact from '@/pages/Contact';
@@ -31,9 +34,19 @@ function Router() {
         <Route path="/services" component={Services} />
         <Route path="/fractional-cmo" component={FractionalCMO} />
         <Route path="/ai-automation" component={AIAutomation} />
+        {servicePages.slice(2).map((page) => (
+          <Route key={page.route} path={page.route}>
+            <ServicePage page={page} />
+          </Route>
+        ))}
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
+        {Object.entries(portfolioRedirects).map(([from, to]) => (
+          <Route key={from} path={from}>
+            <Redirect to={to} replace />
+          </Route>
+        ))}
         <Route path="/work" component={Work} />
         <Route path="/work/:slug" component={CaseStudy} />
         <Route path="/playbook" component={Playbook} />

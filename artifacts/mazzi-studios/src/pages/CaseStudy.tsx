@@ -2,7 +2,6 @@ import { useParams, Link } from 'wouter';
 import { ArrowLeft, ArrowRight, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
 import { Head } from '@/components/seo/Head';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/animations/FadeUp';
-import { AnimatedCounter } from '@/components/animations/AnimatedCounter';
 import { getCaseStudyBySlug, caseStudies } from '@/data/caseStudies';
 import NotFound from '@/pages/NotFound';
 
@@ -28,7 +27,7 @@ export default function CaseStudy() {
       <section className="relative overflow-hidden" style={{ height: 'clamp(420px, 55vh, 640px)' }}>
         <img
           src={cs.heroImage}
-          alt={cs.client}
+          alt={cs.heroImageAlt}
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Gradient overlay */}
@@ -108,38 +107,18 @@ export default function CaseStudy() {
         style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
       >
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0"
+          <div className="grid grid-cols-1 sm:grid-cols-2 divide-x divide-y sm:divide-y-0"
             style={{ '--tw-divide-opacity': 1, borderTop: '1px solid rgba(255,255,255,0.06)' } as React.CSSProperties}
           >
-            {cs.results.map((r, i) => (
-              <div
-                key={i}
-                className="px-6 py-8"
-                style={{ borderColor: 'rgba(255,255,255,0.06)' }}
-              >
+            {cs.heroMetrics.map((r, i) => (
+              <div key={i} className="px-6 py-8 min-w-0" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
                 <p
-                  className="font-['Bebas_Neue'] leading-none mb-2"
-                  style={{
-                    fontSize: 'clamp(36px, 5vw, 56px)',
-                    color: '#EB2571',
-                  }}
+                  className="font-['Bebas_Neue'] leading-none mb-2 break-words"
+                  style={{ fontSize: 'clamp(36px, 5vw, 56px)', color: '#EB2571' }}
                 >
-                  {r.suffix === '%' || r.suffix === 'x' || r.suffix === '' ? (
-                    <>
-                      <AnimatedCounter
-                        end={parseFloat(r.value) || 0}
-                        decimals={r.value.includes('.') ? 1 : 0}
-                      />
-                      {r.suffix}
-                    </>
-                  ) : (
-                    <>{r.value}{r.suffix}</>
-                  )}
+                  {r.value}
                 </p>
-                <p
-                  className="text-[11px] uppercase tracking-widest leading-snug"
-                  style={{ color: '#cfcfcf' }}
-                >
+                <p className="text-[11px] uppercase tracking-widest leading-snug break-words" style={{ color: '#cfcfcf' }}>
                   {r.label}
                 </p>
               </div>
@@ -167,7 +146,28 @@ export default function CaseStudy() {
                 >
                   {cs.overview}
                 </p>
+                {cs.sponsorLine && (
+                  <p className="text-xs -mt-10 mb-14" style={{ color: '#cfcfcf', paddingLeft: '1.25rem' }}>
+                    {cs.sponsorLine}
+                  </p>
+                )}
               </FadeUp>
+
+              {/* Stat tiles */}
+              <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-14">
+                {cs.results.map((r, i) => (
+                  <StaggerItem key={i}>
+                    <div className="p-6 h-full min-w-0" style={{ background: '#0F0F1C', border: '1px solid rgba(235,37,113,0.12)' }}>
+                      <p className="font-['Bebas_Neue'] text-4xl leading-none mb-2 break-words" style={{ color: '#EB2571' }}>
+                        {r.value}
+                      </p>
+                      <p className="text-[11px] uppercase tracking-widest leading-snug break-words" style={{ color: '#cfcfcf' }}>
+                        {r.label}
+                      </p>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
 
               {/* Challenge */}
               <FadeUp>
@@ -192,7 +192,8 @@ export default function CaseStudy() {
                   <div className="mb-14 overflow-hidden" style={{ border: '1px solid rgba(255,255,255,0.06)' }}>
                     <img
                       src={cs.galleryImages[0]}
-                      alt={`${cs.client} project`}
+                      alt={cs.galleryImageAlts?.[0] ?? ''}
+                      loading="lazy"
                       className="w-full object-cover"
                       style={{ maxHeight: '420px' }}
                     />
@@ -254,7 +255,8 @@ export default function CaseStudy() {
                   <div className="mb-14 overflow-hidden" style={{ border: '1px solid rgba(255,255,255,0.06)' }}>
                     <img
                       src={cs.galleryImages[1]}
-                      alt={`${cs.client} results`}
+                      alt={cs.galleryImageAlts?.[1] ?? ''}
+                      loading="lazy"
                       className="w-full object-cover"
                       style={{ maxHeight: '380px' }}
                     />
@@ -262,36 +264,6 @@ export default function CaseStudy() {
                 </FadeUp>
               )}
 
-              {/* Testimonial */}
-              {cs.testimonial && (
-                <FadeUp>
-                  <blockquote
-                    className="p-8 mb-14"
-                    style={{
-                      background: '#0F0F1C',
-                      borderLeft: '3px solid #EB2571',
-                    }}
-                  >
-                    <p
-                      className="text-lg leading-relaxed mb-5 italic"
-                      style={{ color: '#F5F0EB' }}
-                    >
-                      "{cs.testimonial.quote}"
-                    </p>
-                    <footer>
-                      <p
-                        className="text-[12px] font-bold uppercase tracking-widest"
-                        style={{ color: '#EB2571' }}
-                      >
-                        {cs.testimonial.author}
-                      </p>
-                      <p className="text-[11px] uppercase tracking-wider mt-0.5" style={{ color: '#cfcfcf' }}>
-                        {cs.testimonial.role}
-                      </p>
-                    </footer>
-                  </blockquote>
-                </FadeUp>
-              )}
             </div>
 
             {/* ── Right: sidebar ── */}
@@ -356,7 +328,7 @@ export default function CaseStudy() {
                     Services Delivered
                   </p>
                   <ul className="space-y-2.5">
-                    {cs.services.map((s) => (
+                    {cs.deliveredServices.map((s) => (
                       <li key={s} className="flex items-center gap-2.5">
                         <CheckCircle2 size={13} style={{ color: '#2AC4EA', flexShrink: 0 }} />
                         <span className="text-[13px]" style={{ color: '#F5F0EB' }}>

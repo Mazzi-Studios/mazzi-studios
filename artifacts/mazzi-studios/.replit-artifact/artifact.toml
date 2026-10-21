@@ -15,9 +15,9 @@ run = "pnpm --filter @workspace/mazzi-studios run dev"
 
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/mazzi-studios", "run", "build" ]
-serve = "static"
-publicDir = "artifacts/mazzi-studios/dist/public"
 
+[services.production.run]
+args = [ "node", "artifacts/mazzi-studios/scripts/serve.mjs" ]
 
 [services.env]
 PORT = "23058"

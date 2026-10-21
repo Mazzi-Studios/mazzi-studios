@@ -1,0 +1,493 @@
+# Replit Agent prompt: Services overview + 7 service pages
+
+Paste everything below this line into Replit Agent, or attach this file and tell it "Follow the instructions in this file exactly."
+
+---
+
+## Context
+
+We are rebuilding /services into a short overview page and creating 7 separate service pages. Two of them already exist (/fractional-cmo and /ai-automation) and get new content. Keep the site's existing design system: colors, fonts, buttons, card styles and section spacing. Reuse existing components wherever possible.
+
+## Rules
+
+1. Use the copy in this file word for word. Do not rewrite, shorten, embellish or "improve" it.
+2. Do not add any number, metric, percentage, price, client name, tool name or claim that is not in this file.
+3. Never use em dash or en dash characters (Unicode U+2014 and U+2013) anywhere: not in copy, alt text, meta tags or code comments.
+4. Every price in this file is shown exactly as written. Do not round it or turn it into a range.
+5. When you finish, give me a list of every file you changed and every new route you created.
+
+## Tasks
+
+### 1. Routes
+Create or update these pages:
+
+| Page | Route | Status |
+|---|---|---|
+| Services overview | `/services` | Rebuild |
+| Fractional CMO | `/fractional-cmo` | Replace content |
+| AI Automation & Claude Workflows | `/ai-automation` | Replace content |
+| SEO & AI Search | `/seo-ai-search` | New |
+| Websites | `/websites` | New |
+| Paid Media | `/paid-media` | New |
+| LinkedIn & B2B Outbound | `/linkedin-outbound` | New |
+| Healthcare & Clinical Research Marketing | `/healthcare-marketing` | New |
+
+### 2. Navigation
+- Turn "Services" in the main nav into a dropdown listing the 7 service pages in the order above, with "All Services" at the top linking to /services. On mobile, show them as an expandable list.
+- In the footer "Services" column, replace the current links (including the `#web`, `#linkedin`, `#ppc` and `#strategy` anchors) with links to the 7 pages.
+
+### 3. Remove these claims everywhere on the site
+Search the whole codebase and delete or replace each one:
+- "200+ hours saved monthly", "3x more leads", "10x content output", "24/7 always on"
+- "$250K-$400K/year"
+- "dedicated success manager", "custom fine-tuning", "team training for 5 users"
+- "M&A due diligence", "board/investor support", "daily availability"
+- "multi-agent system"
+- The footer badge "HIPAA-Compliant Ready": replace with "HIPAA-Aware Tracking"
+- "HIPAA-compliant workflows": replace with "HIPAA-aware workflow design"
+
+### 4. Shared page template for the 7 service pages
+Each service page uses these sections, in this order:
+1. **Hero:** eyebrow, H1, subhead, primary button ("Book a Strategy Call" linking to /contact) and secondary button ("See Pricing", which scrolls to the pricing section).
+2. **Proof bar:** 3 stat tiles (value + label). Each tile links to the case study named in brackets. Show the link as a small "See the case study" text link under the label.
+3. **Who it's for:** short intro line plus a bulleted list.
+4. **What's included:** cards, 4 to 6 per page.
+5. **How it works:** numbered steps.
+6. **Pricing:** tier cards. Show the price in large type, then the details. The button on every tier says "Book a Strategy Call" and links to /contact.
+7. **FAQ:** accordion. Add FAQPage JSON-LD schema for every FAQ on the page, using the exact question and answer text.
+8. **Closing CTA:** heading, one line and a button.
+
+Also add Service JSON-LD schema on each service page with name, description (use the meta description), provider "Mazzi Studios" and areaServed "United States".
+
+### 5. Meta
+Set the page title and meta description for every page exactly as given. Use the meta description for og:description and twitter:description too.
+
+### 6. Check your work
+- Load /services and all 7 service pages on desktop and mobile.
+- Click every nav and footer link and every case study link.
+- Validate the FAQPage and Service schema with a JSON-LD parser and fix any errors.
+- Search the built output for the characters U+2014 and U+2013 and for every phrase in task 3. All should return zero results.
+
+---
+
+# PAGE: /services
+
+**Title:** Marketing Services & Pricing | Mazzi Studios
+**Meta description:** Fractional CMO, AI automation, SEO and AI search, websites, paid media and LinkedIn outbound for healthcare, life sciences and B2B. Prices up front.
+
+**Hero**
+- Eyebrow: Services
+- H1: Senior marketing leadership, with the systems to run it.
+- Subhead: We plan the strategy, build the machinery and run it: campaigns, websites, tracking, CRM and AI workflows for healthcare, life sciences and B2B teams. Prices are on the page and results are on the Work page.
+- Buttons: "Book a Strategy Call" (/contact) and "See Our Work" (/work)
+
+**Section: How we're different** (3 short columns)
+1. **Strategy and execution in one place.** You don't hire a strategist and then hunt for someone to build what they recommend. The same person who sets the plan sets up the tracking, the CRM and the campaigns.
+2. **AI-native from day one.** We work with Claude, n8n and the tools you already use, so research, reporting and routine marketing tasks take hours instead of weeks.
+3. **Numbers you can check.** Every result we publish comes from a client's own ad accounts, CRM, analytics or patient database.
+
+**Section: Services** (7 cards in a grid. Each card shows: name, one line, proof stat, "Starting at" price and a "Learn more" link to the page.)
+
+| Service | One line | Proof stat | Starting at | Link |
+|---|---|---|---|---|
+| Fractional CMO | Senior marketing leadership without a full-time hire. | Fractional CMO for a national oncology research network since 2024 | $7,500/mo | /fractional-cmo |
+| AI Automation & Claude Workflows | Workflows and Claude setups that take routine work off your team. | 10+ AI automations running for one client | $1,500 discovery | /ai-automation |
+| SEO & AI Search | Rank on Google and get cited by ChatGPT, Perplexity and AI Overviews. | Domain Rating 10 to 34 in two years | $2,500 audit | /seo-ai-search |
+| Websites | Fast, conversion-focused sites you own outright. | 123-pattern catalog the client updates in 15 minutes | $2,500 | /websites |
+| Paid Media | Google, Meta and X campaigns with tracking you can trust. | $230K revenue in one month on $70K ad spend | $1,500/mo + ad spend | /paid-media |
+| LinkedIn & B2B Outbound | Content, outbound and CRM that turn LinkedIn into pipeline. | 1,100+ decision-makers accepted outbound connections | $1,500/mo | /linkedin-outbound |
+| Healthcare & Clinical Research | Patient recruitment and HCP marketing built for health-ad rules. | 562 new research patients from organic search in one year | See each service | /healthcare-marketing |
+
+**Section: Strategy Sprints** (2 cards)
+- **Marketing Diagnostic: $2,500.** 2 weeks. A full audit of your marketing, tracking and competitors, then a 90-day action plan presented live.
+- **Go-to-Market Sprint: $7,500.** 4 to 6 weeks. Market analysis, ICP development, positioning and messaging, launch timeline and budget map.
+- Line under the cards: "Not sure where to start? Most clients start with the Diagnostic."
+
+**Section: Testimonial** (use the existing testimonial component)
+> "It is a pleasure working with Mazzi Studios and they have become an extension of our marketing team."
+> Craig Neita, CEO, Vascular Simulations
+
+**Closing CTA**
+- Heading: Not sure which service fits?
+- Line: Book a 30-minute call. We'll tell you what we'd do first, and what we wouldn't spend money on yet.
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /fractional-cmo
+
+**Title:** Fractional CMO for Healthcare & B2B | Mazzi Studios
+**Meta description:** Senior marketing leadership from $7,500/mo. Strategy, team and vendor management, tracking and reporting for healthcare, life sciences and B2B companies.
+
+**Hero**
+- Eyebrow: Fractional CMO
+- H1: A senior marketing leader, without the full-time hire.
+- Subhead: Strategy, budget, vendors, reporting and the systems underneath them, owned by one person who has run them for oncology research networks, MedSpas and e-commerce brands.
+
+**Proof bar**
+- `Since 2024` / Fractional CMO for a national oncology research network [START Center for Cancer Research]
+- `10 to 34` / Domain Rating growth during the same engagement [START Center for Cancer Research]
+- `86%` / Of MedSpa leads tied to the channel that produced them [Contours]
+
+**Who it's for**
+Companies that need marketing leadership now and can't justify, or can't find, a full-time CMO:
+- Healthcare practices, research sites and life sciences companies
+- B2B companies with a sales team but no marketing owner
+- Founder-led businesses whose marketing runs on vendors nobody manages
+- Teams with a marketing coordinator who needs direction
+
+**What's included**
+1. **Strategy and budget.** A channel plan and budget built on your numbers, reviewed monthly.
+2. **Vendor and team management.** We manage agencies, freelancers and in-house staff so work ships on time and to brief.
+3. **Tracking and reporting.** Conversion tracking, CRM source data and a monthly executive report that shows cost per lead, pipeline and what we're changing.
+4. **Marketing operations.** CRM setup, lead routing, email programs and automation, built or fixed hands-on.
+5. **Go-to-market planning.** Positioning, messaging and launch plans for new services, locations or products.
+
+**How it works**
+1. **Download (weeks 1 to 2).** We learn the business, audit every channel and the tracking behind it, and meet your team and vendors.
+2. **Plan (weeks 3 to 4).** A 90-day plan with priorities, budget and the 3 to 5 numbers we'll report on every week.
+3. **Run (month 2 onward).** Weekly working sessions, monthly executive reports and quarterly plan reviews.
+
+**Pricing** (all tiers: 6-month minimum, except Full)
+- **Lite: $7,500/mo.** About 10 hours a week. Strategy and channel plan, vendor management, weekly strategy session, monthly executive report.
+- **Growth: $12,000/mo.** About 15 hours a week. Everything in Lite, plus go-to-market planning, brand strategy, marketing technology setup and hiring guidance. Mark this tier "Most Popular".
+- **Full: $20,000/mo.** About 20 hours a week, 12-month minimum. Everything in Growth, plus full ownership of the marketing function, sales and marketing alignment, and a seat in leadership meetings.
+
+**FAQ**
+- **How is a fractional CMO different from an agency?** An agency sells you its services. A fractional CMO owns your results and decides which services you need, including whether you need an agency at all.
+- **How fast will we see results?** The first 30 days fix tracking and remove waste, which often shows up in cost per lead quickly. Growth from new channels usually takes one to two quarters.
+- **Do you work with our existing team and vendors?** Yes. Most engagements start by managing the people and vendors you already have.
+- **Can we start smaller?** Yes. The Marketing Diagnostic ($2,500, 2 weeks) gives you an audit and a 90-day plan, and many clients start there.
+- **Do you work in healthcare and HIPAA-sensitive settings?** Yes. We set up tracking and ad platforms so patient information stays out of them.
+
+**Closing CTA**
+- Heading: Need a marketing leader this quarter?
+- Line: Tell us where marketing stands today and we'll tell you what the first 90 days would look like.
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /ai-automation
+
+**Title:** AI Marketing Automation & Claude Workflows | Mazzi Studios
+**Meta description:** Custom n8n workflows and Claude setups for marketing teams: reporting, content, lead routing and CRM automation. Discovery from $1,500.
+
+**Hero**
+- Eyebrow: AI Automation & Claude Workflows
+- H1: Put AI to work on the marketing tasks your team repeats every week.
+- Subhead: We build workflows in n8n, HubSpot and Claude that pull your data, draft the content, route the leads and write the report, with a person approving anything that goes out.
+
+**Proof bar**
+- `10+` / AI automations and workflows running for an oncology research network [START Center for Cancer Research]
+- `5` / Buying-signal workflows that send the right sales rep's email automatically [START Center for Cancer Research]
+- `$2,315` / Revenue the ad account couldn't see, recovered by a nightly automated upload in its first week [Peptide Brand]
+
+**Who it's for**
+- Marketing teams buried in reporting, list pulls and repetitive content
+- Sales teams that miss buying signals because nobody is watching for them
+- Companies that bought Claude or ChatGPT seats and aren't getting much from them
+- Healthcare organizations that want automation without putting patient data at risk
+
+**What's included**
+1. **Reporting automation.** Weekly reports pulled from your ad accounts, analytics and CRM, written up in plain English and sent to your inbox.
+2. **Content workflows.** Research and news feeds turned into draft blog posts and social content in your voice, queued for approval.
+3. **Lead and sales automation.** Buying signals, lead scoring and routing in your CRM, so the right person follows up at the right time.
+4. **Claude for your team.** Custom Claude skills written in your brand voice and processes, Claude connected to your Google Ads, Search Console, analytics and CRM, project setup and team training.
+5. **Tracking automation.** Server-side conversion tracking and offline conversion uploads, so ad platforms optimize on real sales.
+
+**Section: How we use Claude** (short block, 4 bullets)
+We run our own agency on Claude, so we build for clients what already works for us:
+- Custom Claude skills for SEO audits, AI search visibility, structured data and ad account diagnostics
+- Claude connected directly to Google Ads and Search Console to read live account data
+- Claude working in the browser to research competitors, audit websites and pull platform data
+- Claude Code to design and build websites that hand off cleanly to the client
+
+**How it works**
+1. **Discovery.** We map the tasks your team repeats, what each one costs in hours and which ones are safe to automate.
+2. **Design.** You approve each workflow on paper first: inputs, steps, approvals and outputs.
+3. **Build and test.** We build in your accounts, test with real data and fix what breaks.
+4. **Launch and train.** Your team learns to use and adjust it, followed by 30 days of support.
+
+**Pricing**
+- **Discovery: $1,500.** Process mapping and an automation plan. Credited toward your build if you go ahead.
+- **Starter Suite: from $5,000.** 2 weeks. 1 to 2 workflows, integration with your tools, 30-minute training, monthly monitoring.
+- **Growth Suite: from $10,000.** 4 weeks. 3 to 4 workflows, AI writing and analysis steps, a reporting dashboard, 60-minute training, weekly check-ins. Mark this tier "Most Popular".
+- **Enterprise Suite: from $15,000.** 6+ weeks. 5 or more workflows across marketing and sales, HIPAA-aware workflow design and full team training.
+- **Ongoing support: $500 to $2,500/mo.** Monitoring, updates and improvements after launch.
+
+**FAQ**
+- **What tools do you build with?** n8n, HubSpot, Claude, Zapier when it's already in place, and the APIs of your ad, analytics and CRM platforms.
+- **Do you build AI agents?** Yes. We build workflows and Claude setups that work through multi-step tasks on their own, with a person approving anything customer-facing.
+- **Is it safe for healthcare data?** We design workflows so protected health information never passes through tools without a signed business associate agreement. When in doubt, we keep patient data out of the automation entirely.
+- **Who owns the workflows?** You do. Everything is built in your accounts, and you keep it if we stop working together.
+- **Can you set up Claude for our team?** Yes. That includes skills written for your processes, connections to your tools, and training so your team uses it every day.
+
+**Closing CTA**
+- Heading: What does your team do every Monday that a workflow could do instead?
+- Line: Start with a $1,500 discovery and get a plan you can use even if you build it yourself.
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /seo-ai-search
+
+**Title:** SEO & AI Search Optimization (GEO/AEO) | Mazzi Studios
+**Meta description:** Rank on Google and get cited by ChatGPT, Perplexity and Google AI Overviews. Technical SEO, content and AI search visibility. Audits from $2,500.
+
+**Hero**
+- Eyebrow: SEO & AI Search
+- H1: Get found on Google and cited in AI answers.
+- Subhead: Buyers now ask ChatGPT, Perplexity and Google's AI Overviews before they ever click a link. We build the authority, content and technical foundation that gets you named in both places.
+
+**Proof bar**
+- `10 to 34` / Ahrefs Domain Rating in two years [START Center for Cancer Research]
+- `1,100+` / New referring domains [START Center for Cancer Research]
+- `53` / Top-3 Google rankings, up from 12 [START Center for Cancer Research]
+
+**Who it's for**
+- Companies that rank on Google but never come up in AI answers
+- Healthcare and research organizations competing with large institutions for search visibility
+- E-commerce brands that can't rely on paid ads alone
+- Anyone whose website traffic is flat while competitors keep showing up
+
+**What's included**
+1. **AI visibility baseline.** We test the real questions your buyers ask across Google AI Overviews, ChatGPT and Perplexity and record who gets cited.
+2. **Technical SEO.** Indexing, site structure, page speed, schema markup and AI crawler access, fixed in priority order.
+3. **Authority building.** Referring domains, listings and third-party mentions that search engines and AI models trust.
+4. **Citable content.** Pages built to be quoted: clear answers, original data, FAQs and expert authorship.
+5. **Monthly measurement.** Rankings, organic traffic, AI citations and leads from search, in one report.
+
+**How it works** (based on our 13-week GEO/AEO framework)
+1. **Audit (weeks 1 to 2).** Technical audit, AI visibility baseline and competitor gap analysis.
+2. **Trust (weeks 3 to 6).** Fix technical issues, structured data and authority signals.
+3. **Scale (weeks 7 to 10).** Publish and improve the pages most likely to rank and be cited.
+4. **Signal (weeks 11 to 13).** Build mentions and links, then re-test AI visibility against the baseline.
+
+**Pricing**
+- **AI Search Audit: $2,500.** 2 weeks. Technical audit, AI visibility baseline across 3 AI engines, competitor gap analysis and a prioritized fix plan.
+- **SEO & AI Search Program: from $3,500/mo.** 13-week minimum. The full framework: technical fixes, content, authority building and monthly reporting. Mark this tier "Most Popular".
+
+**FAQ**
+- **What is GEO or AEO?** Generative engine optimization and answer engine optimization. Both mean making your business the source that AI tools like ChatGPT, Perplexity and Google AI Overviews quote when someone asks a question in your field.
+- **Is SEO still worth it if people use AI search?** Yes. AI tools pull heavily from pages that already rank and carry authority, so strong SEO is the foundation of AI visibility.
+- **How long does it take?** Technical fixes can show up within weeks. Authority and rankings build over months, which is why the program runs a 13-week minimum.
+- **How do you measure AI visibility?** We run the same set of buyer questions across AI engines at the start and end of each cycle and track how often you're cited.
+
+**Closing CTA**
+- Heading: Find out whether AI search knows you exist.
+- Line: The AI Search Audit shows where you're cited, where competitors are cited instead and what to fix first.
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /websites
+
+**Title:** Website Design & Development from $2,500 | Mazzi Studios
+**Meta description:** Fast, conversion-focused websites for healthcare, life sciences and B2B, built so your team can update them. You own the code and hosting. From $2,500.
+
+**Hero**
+- Eyebrow: Websites
+- H1: Websites that convert, and that your team can actually update.
+- Subhead: WordPress, WooCommerce and modern custom builds, set up with tracking from day one and handed over so you own everything.
+
+**Proof bar**
+- `123` / Patterns in a custom catalog the client updates on its own [Atrium Wallcoverings]
+- `15 min` / For the client's team to publish a new pattern, no developer needed [Atrium Wallcoverings]
+- `2` / Buyer audiences served by one website: clinicians and health system leaders [Carevive]
+
+**Who it's for**
+- Businesses whose site looks dated or doesn't explain what they do
+- Teams that wait on a developer for every small change
+- Healthcare and life sciences companies that need to speak to more than one audience
+- E-commerce brands moving to WooCommerce or Shopify
+
+**What's included**
+1. **Strategy and copy.** Messaging, page structure and copy written for the buyer, not just the design.
+2. **Design and build.** Mobile-first design in WordPress, WooCommerce, Shopify or a modern custom stack.
+3. **Tracking from launch.** Analytics, conversion tracking and form source capture working on day one.
+4. **SEO and AI search foundations.** Clean structure, schema markup and fast load times built in.
+5. **Training and handoff.** A plain-English guide and a walkthrough, so your team can update pages on its own.
+
+**Section: You own it**
+Every site is handed over in your name: your domain, your hosting, your code. Choose a site your team manages itself, or a care plan where we keep it updated for you.
+
+**How it works**
+1. **Discovery.** Goals, audiences, competitors and the content you have.
+2. **Structure and copy.** Sitemap, wireframes and copy for approval.
+3. **Design and build.** Full build with tracking, tested on every device.
+4. **Launch and handoff.** Go live, training and a written how-to guide.
+
+**Pricing**
+- **Landing Page: $1,500.** 5 to 7 days. One high-converting page for a campaign or offer.
+- **Starter Site: $2,500.** 2 weeks. Up to 5 pages.
+- **Website Refresh: $3,500.** 2 to 3 weeks. New design for your home page plus 5 pages.
+- **Business Site: $5,000.** 3 to 4 weeks. Up to 10 pages. Mark this tier "Most Popular".
+- **E-Commerce Store: $7,500.** 4 to 5 weeks. Shopify or WooCommerce, up to 50 products.
+- **Growth Site: $8,500.** 4 to 6 weeks. Up to 20 pages plus a landing page.
+
+**Care Plans** (show as a smaller row under pricing)
+- **Essential: $150/mo.** Updates, backups, uptime monitoring, 30 minutes of support.
+- **Growth: $350/mo.** Everything in Essential, plus SEO monitoring, security and 1 hour of support.
+- **Premium: $750/mo.** Everything in Growth, plus content updates, conversion tracking and priority support.
+
+**FAQ**
+- **Which platform will you use?** Usually WordPress for content-led sites, WooCommerce or Shopify for stores, and a custom build when the project needs it. We recommend one after discovery.
+- **Who owns the website?** You do. The domain, hosting and code are in your name from launch.
+- **Can my team update it without a developer?** Yes. Every site comes with training and a written guide.
+- **Do you write the copy?** Yes. Copy and page structure are part of every build.
+
+**Closing CTA**
+- Heading: Ready for a site that does more than sit there?
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /paid-media
+
+**Title:** PPC Management: Google, Meta & X Ads | Mazzi Studios
+**Meta description:** Google, Meta and X ad management with server-side conversion tracking, so you pay for results you can see. From $1,500/mo plus ad spend.
+
+**Hero**
+- Eyebrow: Paid Media
+- H1: Ad spend that reports to real revenue.
+- Subhead: Google, Meta and X campaigns built on tracking you can trust, including in restricted categories where the platforms make it hard.
+
+**Proof bar**
+- `$230K` / Revenue in a single month on $70K in ad spend [Peptide Brand]
+- `2.83x` / Google Performance Max ROAS across 956 conversions [Peptide Brand]
+- `24%` / Lower cost per click from one tested change to ad copy [Peptide Brand]
+
+**Who it's for**
+- Businesses spending on ads without knowing which campaigns produce sales
+- E-commerce brands in restricted or policy-heavy categories
+- Healthcare advertisers who need patient-safe tracking
+- Teams ready to scale spend once the numbers hold up
+
+**What's included**
+1. **Tracking first.** Server-side conversion tracking and offline uploads, so platforms optimize on real sales.
+2. **Campaign build.** Google Search, Performance Max and Shopping, Meta, X and Microsoft Ads.
+3. **Feed management.** Merchant Center feed audits and fixes for e-commerce.
+4. **Creative testing.** Structured A/B tests that settle what works with data.
+5. **Reporting.** Spend, cost per lead or purchase and return, checked against your CRM or store data.
+
+**How it works**
+1. **Audit.** Account, tracking and feed review before any new spend.
+2. **Fix and launch.** Repair tracking, restructure campaigns and launch.
+3. **Optimize.** Regular bid, budget, audience and creative changes.
+4. **Scale.** Increase budget only while return holds.
+
+**Pricing** (management fee; ad spend is paid directly to the platforms)
+- **Starter: $1,500/mo.** Ad spend up to $5K/mo. One platform (Google or Meta), bi-weekly optimization, monthly reporting.
+- **Growth: $2,500/mo.** Ad spend $5K to $15K/mo. Google and Meta, retargeting, A/B testing, bi-weekly reporting. Mark this tier "Most Popular".
+- **Scale: $4,000/mo.** Ad spend $15K+/mo. Full funnel across Google, Meta and LinkedIn, conversion rate recommendations, weekly optimization.
+
+**FAQ**
+- **Is ad spend included?** No. Ad spend is billed by the platforms directly to your card. Our fee covers strategy, management and reporting.
+- **Can you advertise in restricted categories?** Yes. We've run campaigns in categories where Google Search ads, Meta and TikTok are closed, by focusing on the channels and formats that do approve.
+- **Do you work with HIPAA-sensitive accounts?** Yes. We set up tracking so patient information is never sent to ad platforms.
+- **How soon will we see results?** Tracking fixes show up first, because the platforms start seeing sales they were missing. We scale spend only after the campaigns have enough conversion data to hold their return.
+
+**Closing CTA**
+- Heading: Not sure your ad platforms see your real sales?
+- Line: Most accounts we audit have a tracking gap. We'll find yours.
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /linkedin-outbound
+
+**Title:** LinkedIn Marketing & B2B Outbound | Mazzi Studios
+**Meta description:** LinkedIn content, outbound campaigns and CRM setup that turn B2B audiences into conversations. From $1,500/mo.
+
+**Hero**
+- Eyebrow: LinkedIn & B2B Outbound
+- H1: Turn LinkedIn into conversations with the people who buy.
+- Subhead: Executive content, outbound campaigns built for one buyer at a time and a CRM that catches every reply.
+
+**Proof bar**
+- `1,100+` / Decision-makers accepted outbound LinkedIn connections [Cingo Column Wraps]
+- `46.5%` / Connection acceptance rate from one targeted audience, with a 10.7% reply rate [Cingo Column Wraps]
+- `40` / Qualified leads at a trade show booth in a day and a half [Cingo Column Wraps]
+
+**Who it's for**
+- B2B companies selling to a defined list of decision-makers
+- Founders and executives who should be posting but aren't
+- Companies heading to conferences with no plan to follow up
+- Teams whose CRM is a list nobody works
+
+**What's included**
+1. **Executive content.** Posts and articles written in your voice and approved before they publish.
+2. **Outbound campaigns.** LinkedIn sequences built for one buyer type at a time, each pointing to a page made for that audience.
+3. **CRM setup.** Separate paths for cold leads and engaged contacts, with automatic follow-up journeys.
+4. **Conference programs.** Attendee lists loaded and sequenced before the show, with follow-up after it.
+5. **Reporting.** Acceptance rates, replies and meetings by audience.
+
+**How it works**
+1. **Audience map.** Define the buyer types and build the lists.
+2. **Message and content.** Write the profile, posts and outbound sequences.
+3. **Launch.** Start campaigns one audience at a time.
+4. **Learn and scale.** Move effort to the audiences that reply.
+
+**Pricing** (minimums apply)
+- **Starter: $1,500/mo.** 3-month minimum. 8 posts a month, profile optimization, content calendar.
+- **Authority Builder: $3,500/mo.** 6-month minimum. 12 posts and 2 carousels a month, engagement management, connection strategy. Mark this tier "Most Popular".
+- **Executive: $6,000/mo.** 6-month minimum. 20 posts a month, ghostwritten articles, outbound lead generation and a newsletter.
+
+**FAQ**
+- **Will it sound like me?** Yes. We learn your voice from your own writing and you approve everything before it goes live.
+- **Is LinkedIn automation safe for my account?** We keep sending volumes conservative and watch pending invitations, which is what LinkedIn uses to limit accounts.
+- **What CRM do you work with?** HubSpot, Insightly and most CRMs that connect to email and LinkedIn tools.
+- **How fast does outbound work?** Connection acceptances show up within days of launch. How quickly they turn into meetings depends on the audience and the offer, which is why we report replies and meetings by audience from the start.
+
+**Closing CTA**
+- Heading: Who are the 500 people you most want to talk to?
+- Line: We'll show you how we'd reach them.
+- Button: Book a Strategy Call
+
+---
+
+# PAGE: /healthcare-marketing
+
+**Title:** Healthcare & Clinical Research Marketing | Mazzi Studios
+**Meta description:** Patient recruitment, HCP marketing and HIPAA-aware tracking for research sites, oncology networks, life sciences companies and MedSpas.
+
+**Hero**
+- Eyebrow: Healthcare & Clinical Research
+- H1: Marketing that fills studies, reaches clinicians and plays by health-ad rules.
+- Subhead: Patient recruitment, physician and sponsor marketing, and tracking that keeps patient data out of ad platforms, from a team that has worked inside research sites and oncology networks.
+
+**Proof bar**
+- `562` / New research patients from organic search in one year [Precision Clinical Research]
+- `1,339` / New patients tracked to their source in one year [Precision Clinical Research]
+- `5` / Clinical experts on one national awareness program [Canopy Cancer Collective × PanCAN]
+
+**Who it's for**
+- Clinical research sites that need steady enrollment across studies
+- Oncology networks and life sciences companies marketing to sponsors and physicians
+- Patient advocacy and nonprofit health organizations running awareness campaigns
+- MedSpas and specialty practices that need leads they can trace to a channel
+
+**What's included**
+1. **Patient recruitment.** Study-specific campaigns, SEO and SMS to existing patients, with every new patient tagged to its source.
+2. **Physician and sponsor marketing.** HCP email programs, LinkedIn and paid search aimed at the people who refer and fund.
+3. **Compliant creative.** Ads and posts written to platform health-ad rules and reviewed for medical accuracy.
+4. **HIPAA-aware tracking.** Analytics and ad tracking set up so protected health information stays out of ad platforms.
+5. **Campaigns and events.** Awareness campaigns, symposiums and webinars with clear reporting.
+
+**How it works**
+1. **Audit.** Channels, tracking, consent and data flows reviewed for risk and waste.
+2. **Plan.** A plan by audience: patients, physicians, sponsors.
+3. **Run.** Campaigns, content and automation, with weekly source reporting.
+
+**Pricing**
+- Line: Healthcare work uses the pricing on each service page. Most clients start with a Marketing Diagnostic at $2,500.
+- Links: Fractional CMO · SEO & AI Search · Paid Media · AI Automation
+
+**FAQ**
+- **Can you advertise clinical trials on Meta and Google?** Yes, within each platform's health and clinical trial rules. We write qualifying questions in plain language and avoid claims the platforms reject.
+- **How do you handle HIPAA?** We keep protected health information out of ad pixels and third-party tools, review tracking scripts on patient-facing pages and only use vendors that will sign a business associate agreement where one is needed.
+- **Do you work with sponsors and CROs too?** Yes. We market research networks to biotech and pharma sponsors as well as to patients.
+
+**Closing CTA**
+- Heading: Need more patients, physicians or sponsors?
+- Button: Book a Strategy Call

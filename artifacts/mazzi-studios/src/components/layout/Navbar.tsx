@@ -1,6 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { serviceNavigation } from '@/data/services';
+
+const serviceMenu = [{ name: 'All Services', href: '/services' }, ...serviceNavigation];
+const serviceHrefs = serviceMenu.map((s) => s.href);
 
 const navLinks = [
   { name: 'Services', href: '/services' },
@@ -15,10 +19,39 @@ const navLinks = [
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeTimer = useRef<number | undefined>(undefined);
+  const servicesActive = serviceHrefs.includes(location);
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setServicesOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    const onDown = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) setServicesOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setServicesOpen(false); triggerRef.current?.focus(); }
+    };
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('mousedown', onDown); document.removeEventListener('keydown', onKey); };
+  }, [servicesOpen]);
+
+  const openMenu = () => { window.clearTimeout(closeTimer.current); setServicesOpen(true); };
+  const scheduleClose = () => { window.clearTimeout(closeTimer.current); closeTimer.current = window.setTimeout(() => setServicesOpen(false), 150); };
+  const focusItem = (dir: 1 | -1) => {
+    const items = Array.from(dropdownRef.current?.querySelectorAll<HTMLAnchorElement>('[data-menu-item]') ?? []);
+    const idx = items.indexOf(document.activeElement as HTMLAnchorElement);
+    const next = idx === -1 ? (dir === 1 ? 0 : items.length - 1) : (idx + dir + items.length) % items.length;
+    items[next]?.focus();
+  };
 
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
@@ -36,7 +69,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
 
-        {/* Logo — full color */}
+        {/* Logo full color */}
         <Link href="/" className="z-50 shrink-0" aria-label="Mazzi Studios home">
           <img
             src="/brand-assets/mazzi-logo.png"
@@ -47,7 +80,59 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-5 lg:gap-8">
-          {navLinks.map((link) => (
+          <div
+            ref={dropdownRef}
+            className="relative"
+            onMouseEnter={openMenu}
+            onMouseLeave={scheduleClose}
+            onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setServicesOpen(false); }}
+            onKeyDown={(e) => {
+              if (e.key === 'ArrowDown') { e.preventDefault(); setServicesOpen(true); requestAnimationFrame(() => focusItem(1)); }
+              if (e.key === 'ArrowUp' && servicesOpen) { e.preventDefault(); focusItem(-1); }
+            }}
+          >
+            <button
+              ref={triggerRef}
+              type="button"
+              data-testid="button-nav-services"
+              aria-haspopup="true"
+              aria-expanded={servicesOpen}
+              aria-controls="services-menu"
+              onClick={(e) => {
+                window.clearTimeout(closeTimer.current);
+                setServicesOpen((open) => e.detail === 0 ? !open : true);
+              }}
+              className="flex items-center gap-1 text-[12px] uppercase tracking-wider font-semibold transition-colors duration-200 hover:text-[#EB2571]"
+              style={{ color: servicesActive || servicesOpen ? '#EB2571' : '#111111' }}
+            >
+              Services
+              <ChevronDown size={14} aria-hidden="true" className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div
+              id="services-menu"
+              className="absolute left-1/2 top-full pt-4 -translate-x-1/2"
+              style={{ visibility: servicesOpen ? 'visible' : 'hidden', opacity: servicesOpen ? 1 : 0, transition: 'opacity 150ms' }}
+            >
+              <ul className="w-[300px] bg-white text-[#111111] py-2" style={{ border: '1px solid rgba(0,0,0,0.08)', borderTop: '2px solid #EB2571', boxShadow: '0 12px 32px rgba(8,8,16,0.12)' }}>
+                {serviceMenu.map((item, i) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      data-menu-item
+                      data-testid={`link-nav-service-${item.href.slice(1)}`}
+                      tabIndex={servicesOpen ? 0 : -1}
+                      onClick={() => setServicesOpen(false)}
+                      className={`block px-5 py-3 text-[13px] font-semibold hover:bg-[#EB2571]/5 hover:text-[#EB2571] focus:bg-[#EB2571]/5 focus:text-[#EB2571] focus:outline-none transition-colors ${i === 0 ? 'uppercase tracking-wider text-[11px] border-b border-black/5 mb-1' : ''}`}
+                      style={{ color: location === item.href ? '#EB2571' : undefined }}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          {navLinks.filter((l) => l.name !== 'Services').map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -82,6 +167,8 @@ export function Navbar() {
       {/* Mobile full-screen overlay */}
       <div
         className="md:hidden fixed inset-0 flex flex-col transition-all duration-300"
+        aria-hidden={!mobileMenuOpen}
+        inert={!mobileMenuOpen}
         style={{
           background: '#080810',
           opacity: mobileMenuOpen ? 1 : 0,
@@ -89,8 +176,8 @@ export function Navbar() {
           transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-12px)',
         }}
       >
-        {/* Top row — logo + close */}
-        <div className="flex items-center justify-between px-4 pt-4 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        {/* Top row logo + close */}
+        <div className="flex shrink-0 items-center justify-between px-4 pt-4 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
           <img
             src="/brand-assets/mazzi-logo.png"
             alt="Mazzi Studios"
@@ -107,8 +194,47 @@ export function Navbar() {
         </div>
 
         {/* Links */}
-        <nav className="flex flex-col flex-1 justify-center px-6 gap-1">
-          {navLinks.map((link, i) => (
+        <nav
+          className="flex min-h-0 flex-col flex-1 justify-start px-6 py-4 gap-1 overflow-y-auto"
+          onClick={(e) => {
+            if ((e.target as Element).closest('a')) {
+              setMobileMenuOpen(false);
+              setMobileServicesOpen(false);
+            }
+          }}
+        >
+          {navLinks.map((link, i) => link.name === 'Services' ? (
+            <div key="services" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+              <button
+                type="button"
+                data-testid="button-mobile-services"
+                aria-expanded={mobileServicesOpen}
+                aria-controls="mobile-services-list"
+                onClick={() => setMobileServicesOpen((v) => !v)}
+                className="w-full flex items-center justify-between py-4 text-[32px] font-['Bebas_Neue'] tracking-wide"
+                style={{ color: servicesActive ? '#EB2571' : '#F5F0EB' }}
+              >
+                Services
+                <ChevronDown size={24} aria-hidden="true" className={`transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileServicesOpen && (
+                <ul id="mobile-services-list" className="pb-4 pl-4 space-y-1">
+                  {serviceMenu.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        data-testid={`link-mobile-service-${item.href.slice(1)}`}
+                        className="block py-2 text-[15px] font-semibold"
+                        style={{ color: location === item.href ? '#EB2571' : '#cfcfcf' }}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ) : (
             <Link
               key={link.href}
               href={link.href}
@@ -124,13 +250,14 @@ export function Navbar() {
         </nav>
 
         {/* Bottom CTA */}
-        <div className="px-6 pb-10 pt-6" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="shrink-0 px-6 pb-10 pt-6" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           <Link
             href="/contact"
+            onClick={() => setMobileMenuOpen(false)}
             className="block w-full text-center text-white text-[13px] font-bold uppercase tracking-widest py-4 transition-opacity hover:opacity-85"
             style={{ background: '#EB2571', borderRadius: 0 }}
           >
-            Book Your Strategy Call
+            Book a Strategy Call
           </Link>
           <p className="text-center text-[#cfcfcf] text-[11px] uppercase tracking-widest mt-4">
             Miami · National Reach

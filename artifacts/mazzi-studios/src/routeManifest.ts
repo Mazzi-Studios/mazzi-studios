@@ -1,5 +1,6 @@
 import { posts } from '@/data/posts';
 import { caseStudies } from '@/data/caseStudies';
+import { servicePages } from '@/data/services';
 
 export interface PrerenderRoute {
   path: string;
@@ -27,6 +28,12 @@ const staticRoutes: PrerenderRoute[] = [
 
 export const prerenderRoutes: PrerenderRoute[] = [
   ...staticRoutes,
+  ...servicePages.slice(2).map((page) => ({
+    path: page.route,
+    index: true,
+    changefreq: 'monthly' as const,
+    priority: 0.9,
+  })),
   ...caseStudies.map((caseStudy) => ({
     path: `/work/${caseStudy.slug}`,
     index: true,

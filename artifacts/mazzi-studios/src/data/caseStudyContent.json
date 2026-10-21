@@ -1,0 +1,666 @@
+[
+  {
+    "id": 1,
+    "slug": "peptide-brand",
+    "client": "Peptide Brand",
+    "industry": "E-commerce",
+    "tags": [
+      "E-commerce"
+    ],
+    "location": "National",
+    "date": "December 2024 to present",
+    "overview": "Launched, scaled and rebuilt WooCommerce research peptide storefronts in a category that Meta, TikTok, Mailchimp, Klaviyo and even WooCommerce's own extensions refuse to serve.",
+    "heroMetrics": [
+      {
+        "value": "$230K",
+        "label": "Revenue in a single month on $70K in ad spend"
+      },
+      {
+        "value": "2.83x",
+        "label": "Google Performance Max ROAS across 956 conversions"
+      }
+    ],
+    "results": [
+      {
+        "value": "3.3x",
+        "label": "Return on total ad spend in the peak month"
+      },
+      {
+        "value": "$146,820",
+        "label": "Google Ads conversion value in 59 days"
+      },
+      {
+        "value": "7",
+        "label": "WooCommerce extensions replaced in under 3 weeks"
+      },
+      {
+        "value": "24%",
+        "label": "Share of revenue from a new affiliate channel in its first 30 days"
+      }
+    ],
+    "services": [
+      "PPC",
+      "Conversion Tracking",
+      "E-commerce Operations",
+      "Email",
+      "Affiliate Program"
+    ],
+    "deliveredServices": [
+      "Google Ads (Performance Max, Shopping)",
+      "Merchant Center",
+      "X Ads",
+      "Server-side Conversion Tracking",
+      "WooCommerce Operations",
+      "Email",
+      "Affiliate Program",
+      "Ad Policy Strategy"
+    ],
+    "challenge": "Research peptides sit in one of the most restricted ad categories online. In the first months the brand lost one platform after another: WooCommerce's parent company dropped support for its shipping, product feed and automation extensions; Mailchimp and Klaviyo closed its email accounts; the Meta ad account was disabled; and TikTok suspended the account the day its first ad went live. Later, a payment processor shut off and conversion tracking stopped reporting sales to the ad platforms. The business had to keep selling through all of it.",
+    "approach": [
+      {
+        "heading": "Launch on the channels that stay open",
+        "body": "We set up analytics, Google Ads, Merchant Center, Meta, Instagram and X from scratch in December 2024, then put the budget behind Google Performance Max once it proved it could serve the catalog. As ROAS held, we scaled daily spend to $1,000 and then $1,500. At its peak the store did $230K in revenue in one month on $70K in ad spend."
+      },
+      {
+        "heading": "Rebuild the stack when platforms walk away",
+        "body": "When the WooCommerce extensions were pulled with a February 22 deadline, we sourced and installed replacements for all seven (UPS and USPS shipping, the Google product feed, cart recovery automation and more) before the cutoff. When Mailchimp and Klaviyo blocked the account, we moved email onto a self-hosted system the business controls."
+      },
+      {
+        "heading": "Tracking that survives change",
+        "body": "Payment processors changed often, and each change broke purchase tracking. We rebuilt it server side, so every paid order reports to Google Ads, Microsoft Ads and X no matter which processor took the payment. A nightly offline upload recovered $2,315 in Google-driven revenue in its first week that the ad account had never seen. We also fixed the product feed itself: categories mapped to \"Hardware\" and missing brand and identifier fields on every product."
+      },
+      {
+        "heading": "Channels no platform can shut off",
+        "body": "We built an affiliate program with a tracked link, partner terms and commission tiers. Partners are paid only on real sales, and in its first 30 days the program produced 24% of revenue at zero media cost. On X, a same-day, same-audience test showed that adding a discount line cut cost per click from $1.14 to $0.86, and X's algorithm then put 2.5 times the spend behind that version."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "body-contouring-medspa",
+    "client": "Body Contouring MedSpa",
+    "industry": "MedSpa",
+    "tags": [
+      "MedSpa",
+      "Healthcare"
+    ],
+    "location": "Middle Tennessee",
+    "date": "2023 to present",
+    "overview": "A rebuilt WordPress website, brand messaging, Google and Meta ads, lead funnels and CRM integration for a red-light body contouring studio, so every inquiry lands in one system with its source attached.",
+    "heroMetrics": [
+      {
+        "value": "592",
+        "label": "Leads captured and tracked in the first 11 months"
+      },
+      {
+        "value": "86%",
+        "label": "Of leads tied to the ad, keyword or channel that produced them"
+      }
+    ],
+    "results": [
+      {
+        "value": "2",
+        "label": "Landing pages built for each ad platform, Google and Meta"
+      },
+      {
+        "value": "8",
+        "label": "Part nurture sequence for leads who haven't booked"
+      },
+      {
+        "value": "38",
+        "label": "Emails matched to live radio reads, June and July 2026"
+      },
+      {
+        "value": "12",
+        "label": "Day Open House funnel: RSVP page, lead form, 7 emails, 5 texts"
+      }
+    ],
+    "services": [
+      "Brand Messaging",
+      "WordPress Website",
+      "Google + Meta Ads",
+      "Funnels + CRM",
+      "Email Marketing"
+    ],
+    "deliveredServices": [
+      "Brand Messaging",
+      "WordPress Website Development",
+      "Google Ads + Meta Ads Management",
+      "Landing Pages + Funnels",
+      "CRM Integration",
+      "Email + SMS Marketing",
+      "Radio Creative",
+      "Marketing Automation"
+    ],
+    "challenge": "The studio had a strong offer but its marketing ran on tools that didn't talk to each other. Inquiries came in by web form, phone, walk-in and radio. The client database, the email platform and the ad accounts each held part of the picture, and no one could see where a client first came from.",
+    "approach": [
+      {
+        "heading": "Brand messaging and offer",
+        "body": "We rebuilt the brand messaging around one clear entry point: a $99 first session with a guarantee of 2 inches lost across six measurements on the first visit, or the session is free. The voice speaks to women 35 to 65 in the Nashville area, including clients dealing with loose skin after GLP-1 weight loss, and a 10-month promotion calendar keeps the offer fresh by season."
+      },
+      {
+        "heading": "Website, landing pages and paid media",
+        "body": "We rebuilt the website in WordPress with appointment setting and a blog that explains the red-light technology in plain language. We manage Google Ads and Meta ads, each pointing to its own landing page with source capture on every form, so we can see which keyword, ad and age group produces real inquiries and move budget weekly. Event pages, like the Open House RSVP page, follow the same pattern."
+      },
+      {
+        "heading": "CRM integration",
+        "body": "We connected the studio's customer database to its email and SMS platform, so every segment carries the client's program, referral source and campaign type, down to which radio host's read brought them in. Web and ad leads flow into the same tracker with their channel, keyword or ad name, and landing page attached."
+      },
+      {
+        "heading": "Funnels that run on their own",
+        "body": "An 8-part nurture sequence answers the reasons people put off booking. Every live radio read has a matching email with the same topic and offer. For the July 2026 Open House we built a 12-day funnel: a Facebook lead form, an RSVP page, 7 emails and 5 texts. An automated workflow turns new red-light therapy research into blog and social drafts."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "multi-study-research-site",
+    "client": "Multi-Study Clinical Research Site",
+    "industry": "Clinical Research",
+    "tags": [
+      "Clinical Research",
+      "Healthcare"
+    ],
+    "location": "South Florida",
+    "date": "2021 to present",
+    "overview": "Patient recruitment for a multi-study research site, with every new patient tagged to the channel that brought them in.",
+    "heroMetrics": [
+      {
+        "value": "1,339",
+        "label": "New patients with a tracked source in 2023"
+      },
+      {
+        "value": "562",
+        "label": "New patients from organic search alone"
+      }
+    ],
+    "results": [
+      {
+        "value": "42%",
+        "label": "Of tracked new patients came from organic search, ahead of every paid source"
+      },
+      {
+        "value": "47",
+        "label": "New patients from a single study SMS campaign"
+      },
+      {
+        "value": "64",
+        "label": "New patients from one season of Facebook and Instagram ads"
+      },
+      {
+        "value": "66",
+        "label": "New patients from Google Ads in six months"
+      }
+    ],
+    "services": [
+      "Patient Recruitment",
+      "SEO",
+      "Paid Social",
+      "SMS + Email",
+      "Tracking"
+    ],
+    "deliveredServices": [
+      "Patient Recruitment Strategy",
+      "SEO",
+      "Meta + Google Ads",
+      "SMS + Email Nurture",
+      "Social Content",
+      "Source Tracking + HIPAA Review"
+    ],
+    "challenge": "A research site lives on enrollment, and each study has its own eligibility rules, age limits and deadline. Health-ad rules limit what recruitment ads can say, and outside recruitment vendors charge per referral. The site needed a steady flow of patients it didn't have to rent.",
+    "approach": [
+      {
+        "heading": "Make organic search the base",
+        "body": "We manage the site's SEO so people searching for paid studies and conditions near them find the site directly. In 2023 organic search brought in more new patients than the largest outside recruitment vendor and every ad channel combined."
+      },
+      {
+        "heading": "Text the people who already know you",
+        "body": "Targeted SMS to the existing patient list, one study at a time: COVID-19 (47 new patients), eczema (23) and hypothyroidism (16). It is the lowest-cost enrollment channel a site has."
+      },
+      {
+        "heading": "Paid campaigns built per study",
+        "body": "Facebook, Instagram and Google Ads campaigns built around one study each, with plain-language qualifying questions written to platform health-ad rules. Monthly content calendars keep every active study visible."
+      },
+      {
+        "heading": "Source tracking end to end",
+        "body": "Every new patient record carries the campaign that produced it, so the team knows which channel fills which study and where to spend next."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "oncology-trial-network",
+    "client": "Oncology Trial Network",
+    "industry": "Clinical Research",
+    "tags": [
+      "Clinical Research",
+      "Healthcare"
+    ],
+    "location": "National site network",
+    "date": "November 2024 to present",
+    "overview": "SEO, paid search, HubSpot automation and AI search visibility for a national network of community-based early-phase oncology trial sites.",
+    "heroMetrics": [
+      {
+        "value": "10 → 34",
+        "label": "Ahrefs Domain Rating, October 2024 to October 2026"
+      },
+      {
+        "value": "1,100+",
+        "label": "New referring domains in two years"
+      }
+    ],
+    "results": [
+      {
+        "value": "1,300",
+        "label": "More estimated monthly organic visits than two years ago, per Ahrefs"
+      },
+      {
+        "value": "41",
+        "label": "New top-3 Google rankings (53 today, up from 12)"
+      },
+      {
+        "value": "10+",
+        "label": "AI automations and workflows configured in HubSpot and beyond"
+      },
+      {
+        "value": "66 to 82%",
+        "label": "Of email \"opens\" traced to security bots, so lead scoring was rebuilt"
+      }
+    ],
+    "services": [
+      "Fractional CMO",
+      "SEO",
+      "PPC",
+      "HubSpot Automation",
+      "GEO"
+    ],
+    "deliveredServices": [
+      "Fractional CMO",
+      "SEO + Link Building",
+      "Google + Bing Ads",
+      "HubSpot Lead Scoring + Automation",
+      "AI Workflows",
+      "Email Deliverability",
+      "GEO/AEO"
+    ],
+    "challenge": "The network needed to reach two very different buyers: biotech and pharma sponsors choosing where to place trials, and physicians and patients looking for a trial near them. The site had little search authority, email reporting looked healthy but sales activity didn't match it, and AI search engines barely knew the network existed beyond \"clinical trials near [city].\"",
+    "approach": [
+      {
+        "heading": "Search authority from the ground up",
+        "body": "We built the network's SEO program from a Domain Rating of 10 in October 2024 to 34 today, adding more than 1,100 referring domains along the way. The homepage, investigator profiles and phase pages now rank on their own, and the site holds 53 top-3 Google positions, up from 12. Estimated organic traffic grew by about 1,300 monthly visits over the same period. Three Google Ads campaigns, launched in November 2024, cover brand and trials, Performance Max and preclinical research, with form fills reporting back into HubSpot."
+      },
+      {
+        "heading": "Fixing what the email numbers meant",
+        "body": "HubSpot's own bot filter flagged 66% to 82% of unique opens on broad physician sends. Opens were measuring email security gateways, not doctors. We took opens out of lead scoring, scored on actions a person has to take, such as visiting trial pages, and built a deliverability plan for physician inboxes."
+      },
+      {
+        "heading": "Automation the sales team actually uses",
+        "body": "More than 10 AI automations and workflows now run across marketing and sales. One example: a HubSpot build turns buying signals such as new funding or partnerships into a single email from the account's sales rep. Five signals, five lists, five templates and five workflows, one build serving the whole team."
+      },
+      {
+        "heading": "AI search visibility, the next frontier",
+        "body": "We tested real sponsor and patient questions across Google AI Overviews, ChatGPT and Perplexity. The network earns citations on location searches but not yet on tumor type, drug or topic searches. The cause: the trial finder holds 847 URLs in its sitemap and none of them are in Google's index. Getting those pages indexed is the current milestone."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "parking-media-startup",
+    "client": "Parking Media Startup",
+    "industry": "B2B",
+    "tags": [
+      "B2B"
+    ],
+    "location": "National",
+    "date": "July 2024 to present",
+    "overview": "Brand revamp, an expanded website, CRM and LinkedIn outbound for a startup that turns parking garage columns into ad space and protects them at the same time.",
+    "heroMetrics": [
+      {
+        "value": "1,100+",
+        "label": "Decision-makers who accepted a LinkedIn connection through our outbound"
+      },
+      {
+        "value": "40",
+        "label": "Qualified leads at the booth in a day and a half at the National Parking Association convention"
+      }
+    ],
+    "results": [
+      {
+        "value": "46.5%",
+        "label": "Connection acceptance rate from Atlanta parking operators, with a 10.7% reply rate"
+      },
+      {
+        "value": "20",
+        "label": "LinkedIn outbound campaigns, each built for one buyer type"
+      },
+      {
+        "value": "847",
+        "label": "Convention attendees loaded, tagged and sequenced in the CRM before the show"
+      },
+      {
+        "value": "1,700",
+        "label": "Contacts in an automated CRM follow-up journey"
+      }
+    ],
+    "services": [
+      "Brand Development",
+      "Website Management",
+      "CRM Configuration",
+      "LinkedIn Outreach",
+      "Email Marketing",
+      "Social Media"
+    ],
+    "deliveredServices": [
+      "Brand Development",
+      "Website Management",
+      "CRM Configuration (Insightly)",
+      "LinkedIn Outreach (Dripify)",
+      "Email Marketing",
+      "Social Media Management",
+      "Content"
+    ],
+    "challenge": "The company sells something most buyers have never considered: advertising on parking garage columns that also protects the concrete. That means selling to parking operators, property managers, developers, hotels and advertisers at once, each with a different reason to care, with a two-person founding team and no marketing department.",
+    "approach": [
+      {
+        "heading": "Brand revamp",
+        "body": "We rebuilt the brand around what each buyer gets: ancillary revenue for property owners, column and vehicle protection for operators, and minutes of attention for advertisers. That message now carries the website, sales sheets, conference banners and every post."
+      },
+      {
+        "heading": "An expanded website",
+        "body": "We grew the site with pages for advertisers and for asset and vehicle protection, location content for Chicago and Las Vegas, and eight long-form articles that answer the questions buyers ask before they take a meeting."
+      },
+      {
+        "heading": "A CRM the founders actually use",
+        "body": "We connected Insightly with separate paths for cold leads and engaged contacts, automatic email capture, and journeys that move people from first touch to conversation without manual follow-up. A 1,700-contact follow-up journey and a 5-email nurture series run on it, with each email linking to a tracked article on the site."
+      },
+      {
+        "heading": "Outbound and conference engine",
+        "body": "We have run 20 Dripify campaigns on LinkedIn, each aimed at one buyer: parking operators, hotel brands, malls, mixed-use developers, media buyers, out-of-home ad companies, architects, realtors and car rental companies. More than 1,100 decision-makers have accepted the connection, and the best-performing audience, Atlanta parking operators, accepted at 46.5% and replied at 10.7%. For the National Parking Association convention we loaded and tagged 847 pre-registered attendees in the CRM and sequenced outreach before the doors opened. At the convention, the booth logged 40 qualified leads in a day and a half."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "pancreatic-cancer-awareness-campaign",
+    "client": "Pancreatic Cancer Awareness Campaign",
+    "industry": "Life Sciences",
+    "tags": [
+      "Life Sciences",
+      "Healthcare"
+    ],
+    "location": "National",
+    "date": "June 2026 to December 2026",
+    "overview": "Marketing consultant support for a joint initiative of two national pancreatic cancer organizations: a national awareness campaign and expert mini-symposium for the first U.S. consensus statements on exocrine pancreatic insufficiency in pancreatic cancer care. In progress.",
+    "heroMetrics": [
+      {
+        "value": "5",
+        "label": "Clinical experts from academic cancer centers and national patient organizations on one program"
+      },
+      {
+        "value": "Oct 29",
+        "label": "Live symposium in 2026, with results reported in December"
+      }
+    ],
+    "results": [
+      {
+        "value": "1",
+        "label": "Messaging framework that every asset draws from"
+      },
+      {
+        "value": "4",
+        "label": "LinkedIn posts plus a 7-slide speaker carousel"
+      },
+      {
+        "value": "2",
+        "label": "Campaign emails"
+      },
+      {
+        "value": "6",
+        "label": "Clinical disciplines targeted, from oncologists to dietitians and pharmacists"
+      }
+    ],
+    "services": [
+      "Campaign Strategy",
+      "Messaging",
+      "LinkedIn",
+      "Email",
+      "Event Support",
+      "Reporting"
+    ],
+    "deliveredServices": [
+      "Marketing Consultant",
+      "Campaign Strategy",
+      "Messaging Architecture",
+      "LinkedIn Creative",
+      "Email",
+      "Event Support",
+      "Analytics + Reporting"
+    ],
+    "challenge": "Two national pancreatic cancer organizations released a clinical white paper that many clinicians hadn't seen. The audience was the full pancreatic cancer care team, each discipline with a different reason to care, and every asset needed medical accuracy, sponsor disclosure and sign-off from two organizations.",
+    "approach": [
+      {
+        "heading": "Messaging framework",
+        "body": "Audience segments for each discipline, message pillars, an approved proof-point library and channel rules. Each post and email draws one pillar and one approved statistic, which kept reviews fast and claims consistent."
+      },
+      {
+        "heading": "LinkedIn and email",
+        "body": "Four LinkedIn posts in the client's brand palette, re-sequenced after client feedback into a speaker carousel and a combined method-and-dose post, plus two emails for the client to send."
+      },
+      {
+        "heading": "Symposium support",
+        "body": "Agenda, session flow, Q&A guidance, recording and a designed summary brief for the symposium."
+      },
+      {
+        "heading": "Measurement",
+        "body": "A dashboard and final report on registrations, white paper downloads, email and social, delivered in early December. Results will be added here once the campaign closes."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "wallcovering-supplier",
+    "client": "Commercial Wallcovering Supplier",
+    "industry": "B2B",
+    "tags": [
+      "B2B"
+    ],
+    "location": "South Florida",
+    "date": "2026",
+    "overview": "A custom WordPress catalog for a commercial wallcovering supplier, built so the client's own team can publish new patterns the day they arrive.",
+    "heroMetrics": [
+      {
+        "value": "123",
+        "label": "Patterns in one searchable catalog"
+      },
+      {
+        "value": "15 min",
+        "label": "For the client's team to publish a new pattern, no developer needed"
+      }
+    ],
+    "results": [
+      {
+        "value": "123",
+        "label": "Published patterns, each a structured product with its own images"
+      },
+      {
+        "value": "18",
+        "label": "Grass cloth collections with their own section by code"
+      },
+      {
+        "value": "15 min",
+        "label": "Per new pattern, done by the client's team"
+      },
+      {
+        "value": "1",
+        "label": "Custom theme built from scratch"
+      }
+    ],
+    "services": [
+      "Web Design",
+      "WordPress Development",
+      "Client Training"
+    ],
+    "deliveredServices": [
+      "Web Design",
+      "WordPress Development",
+      "Content Migration",
+      "Client Training"
+    ],
+    "challenge": "Designers and specifiers judge a wallcovering supplier by how fast they can find and compare a pattern. New collections arrive from mills as raw image files, and The supplier needed to post them without waiting on a developer.",
+    "approach": [
+      {
+        "heading": "Custom theme built around the catalog",
+        "body": "Every pattern is a product with structured fields, so search and filtering work the way specifiers shop."
+      },
+      {
+        "heading": "Built for self-service",
+        "body": "Content editing sits apart from the theme files, so the team can add patterns without touching how the site is built."
+      },
+      {
+        "heading": "Handoff guide",
+        "body": "A plain-English guide covering image prep, drafts, preview, publishing and clearing the host cache, so new collections go live the day they arrive."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "oncology-patient-experience-platform",
+    "client": "Oncology Patient Experience Platform",
+    "industry": "Digital Health",
+    "tags": [
+      "Healthcare"
+    ],
+    "location": "National",
+    "date": "May 2025",
+    "overview": "A new website and an ongoing LinkedIn program for an oncology patient experience platform, now part of a national health technology company.",
+    "heroMetrics": [
+      {
+        "value": "5",
+        "label": "Oncology conference cycles covered: ISPOR, ASCO, AONN, ASH and SABCS"
+      },
+      {
+        "value": "2",
+        "label": "Buyer audiences served by one website: oncology clinicians and health system leaders"
+      }
+    ],
+    "results": [
+      {
+        "value": "1",
+        "label": "Website rebuilt from the ground up"
+      },
+      {
+        "value": "5",
+        "label": "Conference cycles with pre-event, live and recap content"
+      },
+      {
+        "value": "2",
+        "label": "Audiences, each with its own path through the site"
+      },
+      {
+        "value": "Monthly",
+        "label": "LinkedIn content calendar"
+      }
+    ],
+    "services": [
+      "LinkedIn Marketing",
+      "Web Design",
+      "Website Development"
+    ],
+    "deliveredServices": [
+      "LinkedIn Marketing",
+      "Web Design",
+      "Website Development"
+    ],
+    "challenge": "The company builds clinically validated technology that improves the treatment experience for people with cancer. Its digital presence didn't reflect the strength of the product or its evidence. The website was outdated, LinkedIn activity was minimal, and there was no consistent voice to build trust with health system buyers in a long, relationship-driven sales cycle.",
+    "approach": [
+      {
+        "heading": "Website redesign and development",
+        "body": "A new site, built to work on every device, for two audiences at once: oncology clinicians evaluating clinical evidence, and health system leaders evaluating cost and implementation."
+      },
+      {
+        "heading": "LinkedIn program",
+        "body": "A monthly content calendar combining clinical thought leadership, outcome storytelling, conference presence and company culture."
+      },
+      {
+        "heading": "Conference content",
+        "body": "A repeatable workflow for each conference: awareness posts before the event, live coverage during it and recaps after it."
+      },
+      {
+        "heading": "Outcome-led messaging",
+        "body": "Messaging that leads with what health system buyers ask about: patient experience, outcomes and cost, rather than product features."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "clinical-research-organization",
+    "client": "Clinical Research Organization",
+    "industry": "Life Sciences",
+    "tags": [
+      "Life Sciences",
+      "Clinical Research"
+    ],
+    "location": "Global",
+    "date": "2024 to 2025",
+    "overview": "A new website, original visuals and an ongoing LinkedIn program for a mission-driven clinical research organization working to make clinical trials easier to access and faster to run.",
+    "heroMetrics": [
+      {
+        "value": "1",
+        "label": "New WordPress website built around the mission and the method"
+      },
+      {
+        "value": "2",
+        "label": "Audiences served by one site: biopharma sponsors and scientific collaborators"
+      }
+    ],
+    "results": [
+      {
+        "value": "2",
+        "label": "Audiences, each with a clear path through the site"
+      },
+      {
+        "value": "4",
+        "label": "Content hubs: services, news, publications and thought leadership"
+      },
+      {
+        "value": "Original",
+        "label": "Video and AI-assisted visuals in place of stock photography"
+      },
+      {
+        "value": "Ongoing",
+        "label": "LinkedIn content program"
+      }
+    ],
+    "services": [
+      "Fractional CMO",
+      "LinkedIn Marketing",
+      "Web Design",
+      "Website Development"
+    ],
+    "deliveredServices": [
+      "Fractional CMO",
+      "LinkedIn Marketing",
+      "Web Design",
+      "Website Development"
+    ],
+    "challenge": "The organization had a strong vision for clinical trials: more access for patients, less burden on patients and providers, and faster, more cost-efficient drug development. Its digital presence didn't show it. The site didn't explain its approach to trial design, and LinkedIn, its main channel for reaching biopharma sponsors, was underused.",
+    "approach": [
+      {
+        "heading": "Website redesign and development",
+        "body": "A new WordPress site that leads with the mission and the method, organized so services, news, publications and thought leadership each have a clear home."
+      },
+      {
+        "heading": "Original visuals",
+        "body": "Video content and original imagery, including carefully prompted AI-generated visuals, so the site looks like the organization rather than a stock library."
+      },
+      {
+        "heading": "LinkedIn program",
+        "body": "An ongoing content program covering trial thought leadership, team spotlights and conference presence, aimed at sponsor and CRO decision-makers."
+      },
+      {
+        "heading": "Fractional CMO strategy",
+        "body": "Marketing aligned with business development, so content supported the partnership conversations already underway."
+      }
+    ]
+  }
+]

@@ -160,7 +160,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* Soften all headings globally — remove any bold override */
+  /* Keep headings on the native regular face; display headings stay lighter and cleaner. */
   h2 {
     font-weight: 400;
   }
@@ -283,6 +283,12 @@
 }
 
 @layer utilities {
+  h2.font-bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
   input[type='search']::-webkit-search-cancel-button {
     @apply hidden;
   }

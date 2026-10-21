@@ -1,0 +1,450 @@
+# Replit Agent prompt: Our Work page update
+
+Paste everything below this line into Replit Agent, or attach this file and tell it "Follow the instructions in this file exactly."
+
+---
+
+## Context
+
+We are replacing the content of the Our Work page (/work) and its case study detail pages (/work/[slug]). The page design, card layout and detail page template stay exactly as they are. Only the data, the filter tabs, the intro copy, the meta description and one new testimonials section change.
+
+## Rules
+
+1. Use the copy in this file word for word. Do not rewrite, shorten, embellish or "improve" it.
+2. Do not add any number, metric, percentage, client name or claim that is not in this file.
+3. Never use em dash or en dash characters (Unicode U+2014 and U+2013) anywhere: not in copy, alt text, meta tags or code comments.
+4. Keep the existing component structure. If a case study has fewer or more fields than the template expects, tell me before changing the template.
+5. When you finish, give me a list of every file you changed.
+
+## Tasks
+
+### 1. Remove two case studies
+- Delete TechScale Partners (slug `techscale-partners`) and Miami Orthopedics (slug `miami-orthopedics`) from the case study data.
+- Add 301 redirects from `/work/techscale-partners` and `/work/miami-orthopedics` to `/work`.
+- Remove both from the sitemap, from any previous/next links, and from anywhere else on the site that mentions them (search the whole codebase for "TechScale" and "Miami Orthopedics").
+
+### 2. Add a "More Website Builds" row
+Below the case study grid, add a compact row titled "More Website Builds". It shows four small cards (name, one line, services), with no detail pages and no metrics. Content is at the end of this file.
+
+### 3. Replace and add case studies
+- Replace all content for Contours (keep slug `contours-medspa`), Carevive (keep slug `carevive`) and Purpose Life Sciences (keep slug `purpose-life-sciences`) with the content below. Remove every old metric on those three pages.
+- Add six new case studies with the slugs given below.
+
+### 4. Display order
+Grid order, and the order previous/next links follow:
+1. Peptide Brand
+2. Contours
+3. Precision Clinical Research
+4. START Center for Cancer Research
+5. Cingo Column Wraps
+6. Canopy Cancer Collective × PanCAN
+7. Atrium Wallcoverings
+8. Carevive
+9. Purpose Life Sciences
+
+### 5. Filter tabs
+Replace the current tabs with: **All · Healthcare · Clinical Research · Life Sciences · MedSpa · E-commerce · B2B**
+
+Each case study shows under its "Filters" list below. The card badge still shows the single "Tag" value.
+
+### 6. Page copy
+- Intro paragraph under "Our Work" (replace the current one):
+  "No vanity metrics and no borrowed numbers. Every result below comes from the client's own sales records, ad accounts, CRM or patient database. Where a project is still in motion, we say so."
+- Meta description, og:description and twitter:description for /work:
+  "Real results for clinical research sites, MedSpas, life sciences and B2B brands: revenue, patients and pipeline traced to their source."
+
+### 7. Testimonials section
+Add a testimonials section on /work, between the "More Website Builds" row and the "Ready to Be Next?" CTA. Heading: "What Clients Say". Use the same visual style as other quote or card sections on the site.
+
+> "It is a pleasure working with Mazzi Studios and they have become an extension of our marketing team."
+> Craig Neita, CEO, Vascular Simulations
+
+> "He got the concept right out of the gate! He used vocabulary that I could understand and framed out the site in no time."
+> Anne Rojas, President, Infinity Medical Education
+
+> "Their work had an immediate impact on our inbound marketing and social media strategy, lead acquisition, and e-commerce sales."
+> Janice Haley, CEO, ToneyBands.com
+
+### 8. Images
+- Keep the current stock-photo approach (hero image plus two in-page images per case study). Pick images that match each industry: lab and research for clinical research, a modern studio for Contours, a parking garage for Cingo, textured interiors for Atrium, a clean e-commerce or lab setting for Peptide Brand.
+- Do not use any client logos.
+- Peptide Brand: no images of vials, syringes or people injecting anything. Use abstract lab or e-commerce imagery.
+- Write descriptive alt text for every image, with no em dashes.
+
+### 9. Each detail page meta
+For each case study, set the page title to "[Client]: Case Study | Mazzi Studios" and the meta description to the card summary.
+
+### 10. Check your work
+- Build and load /work and all 9 detail pages on desktop and mobile.
+- Confirm every filter tab shows the right cases and none is empty.
+- Confirm previous/next links follow the order in task 4.
+- Search the built output for the characters U+2014 and U+2013, and for "TechScale", "Miami Orthopedics", "312%", "4.8x", "3.2x" and "4.1x". All should return zero results.
+
+---
+
+## Case study content
+
+Each hero metric and stat tile has a **value** (the big number) and a **label** (the text under it).
+
+---
+
+### 1. Peptide Brand
+- **Slug:** `peptide-brand`
+- **Tag:** E-commerce
+- **Filters:** E-commerce
+- **Location:** National
+- **Engagement date:** December 2024 to present
+- **Card summary:** Launched, scaled and rebuilt WooCommerce research peptide storefronts in a category that Meta, TikTok, Mailchimp, Klaviyo and even WooCommerce's own extensions refuse to serve.
+- **Hero metrics (card and detail page):**
+  - `$230K` / Revenue in a single month on $70K in ad spend
+  - `2.83x` / Google Performance Max ROAS across 956 conversions
+- **Stat tiles (detail page):**
+  - `3.3x` / Return on total ad spend in the peak month
+  - `$146,820` / Google Ads conversion value in 59 days
+  - `7` / WooCommerce extensions replaced in under 3 weeks
+  - `24%` / Share of revenue from a new affiliate channel in its first 30 days
+- **Services (card):** PPC, Conversion Tracking, E-commerce Operations, Email, Affiliate Program
+
+**The Challenge**
+Research peptides sit in one of the most restricted ad categories online. In the first months the brand lost one platform after another: WooCommerce's parent company dropped support for its shipping, product feed and automation extensions; Mailchimp and Klaviyo closed its email accounts; the Meta ad account was disabled; and TikTok suspended the account the day its first ad went live. Later, a payment processor shut off and conversion tracking stopped reporting sales to the ad platforms. The business had to keep selling through all of it.
+
+**Our Approach**
+
+01. Launch on the channels that stay open
+We set up analytics, Google Ads, Merchant Center, Meta, Instagram and X from scratch in December 2024, then put the budget behind Google Performance Max once it proved it could serve the catalog. As ROAS held, we scaled daily spend to $1,000 and then $1,500. At its peak the store did $230K in revenue in one month on $70K in ad spend.
+
+02. Rebuild the stack when platforms walk away
+When the WooCommerce extensions were pulled with a February 22 deadline, we sourced and installed replacements for all seven (UPS and USPS shipping, the Google product feed, cart recovery automation and more) before the cutoff. When Mailchimp and Klaviyo blocked the account, we moved email onto a self-hosted system the business controls.
+
+03. Tracking that survives change
+Payment processors changed often, and each change broke purchase tracking. We rebuilt it server side, so every paid order reports to Google Ads, Microsoft Ads and X no matter which processor took the payment. A nightly offline upload recovered $2,315 in Google-driven revenue in its first week that the ad account had never seen. We also fixed the product feed itself: categories mapped to "Hardware" and missing brand and identifier fields on every product.
+
+04. Channels no platform can shut off
+We built an affiliate program with a tracked link, partner terms and commission tiers. Partners are paid only on real sales, and in its first 30 days the program produced 24% of revenue at zero media cost. On X, a same-day, same-audience test showed that adding a discount line cut cost per click from $1.14 to $0.86, and X's algorithm then put 2.5 times the spend behind that version.
+
+**Services delivered:** Google Ads (Performance Max, Shopping) · Merchant Center · X Ads · Server-side Conversion Tracking · WooCommerce Operations · Email · Affiliate Program · Ad Policy Strategy
+
+---
+
+### 2. Contours
+- **Slug:** `contours-medspa` (existing)
+- **Title:** Contours
+- **Tag:** MedSpa
+- **Filters:** MedSpa, Healthcare
+- **Location:** Franklin, TN
+- **Engagement date:** 2023 to present
+- **Card summary:** A rebuilt WordPress website, brand messaging, Google and Meta ads, lead funnels and CRM integration for a red-light body contouring studio, so every inquiry lands in one system with its source attached.
+- **Hero metrics:**
+  - `592` / Leads captured and tracked in the first 11 months
+  - `86%` / Of leads tied to the ad, keyword or channel that produced them
+- **Stat tiles:**
+  - `2` / Landing pages built for each ad platform, Google and Meta
+  - `8` / Part nurture sequence for leads who haven't booked
+  - `38` / Emails matched to live radio reads, June and July 2026
+  - `12` / Day Open House funnel: RSVP page, lead form, 7 emails, 5 texts
+- **Services (card):** Brand Messaging, WordPress Website, Google + Meta Ads, Funnels + CRM, Email Marketing
+
+**The Challenge**
+Contours had a strong offer but its marketing ran on tools that didn't talk to each other. Inquiries came in by web form, phone, walk-in and radio. The client database, the email platform and the ad accounts each held part of the picture, and no one could see where a client first came from.
+
+**Our Approach**
+
+01. Brand messaging and offer
+We rebuilt the brand messaging around one clear entry point: a $99 first session with a guarantee of 2 inches lost across six measurements on the first visit, or the session is free. The voice speaks to women 35 to 65 in Franklin and Nashville, including clients dealing with loose skin after GLP-1 weight loss, and a 10-month promotion calendar keeps the offer fresh by season.
+
+02. Website, landing pages and paid media
+We rebuilt the website in WordPress with appointment setting and a blog that explains the red-light technology in plain language. We manage Google Ads and Meta ads, each pointing to its own landing page with source capture on every form, so we can see which keyword, ad and age group produces real inquiries and move budget weekly. Event pages, like the Open House RSVP page, follow the same pattern.
+
+03. CRM integration
+We connected the studio's customer database to its email and SMS platform, so every segment carries the client's program, referral source and campaign type, down to which radio host's read brought them in. Web and ad leads flow into the same tracker with their channel, keyword or ad name, and landing page attached.
+
+04. Funnels that run on their own
+An 8-part nurture sequence answers the reasons people put off booking. Every live radio read has a matching email with the same topic and offer. For the July 2026 Open House we built a 12-day funnel: a Facebook lead form, an RSVP page, 7 emails and 5 texts. An automated workflow turns new red-light therapy research into blog and social drafts.
+
+**Services delivered:** Brand Messaging · WordPress Website Development · Google Ads + Meta Ads Management · Landing Pages + Funnels · CRM Integration · Email + SMS Marketing · Radio Creative · Marketing Automation
+
+---
+
+### 3. Precision Clinical Research
+- **Slug:** `precision-clinical-research`
+- **Tag:** Clinical Research
+- **Filters:** Clinical Research, Healthcare
+- **Location:** Broward County, FL
+- **Engagement date:** 2021 to present
+- **Card summary:** Patient recruitment for a multi-study research site, with every new patient tagged to the channel that brought them in.
+- **Hero metrics:**
+  - `1,339` / New patients with a tracked source in 2023
+  - `562` / New patients from organic search alone
+- **Stat tiles:**
+  - `42%` / Of tracked new patients came from organic search, ahead of every paid source
+  - `47` / New patients from a single study SMS campaign
+  - `64` / New patients from one season of Facebook and Instagram ads
+  - `66` / New patients from Google Ads in six months
+- **Services (card):** Patient Recruitment, SEO, Paid Social, SMS + Email, Tracking
+
+**The Challenge**
+A research site lives on enrollment, and each study has its own eligibility rules, age limits and deadline. Health-ad rules limit what recruitment ads can say, and outside recruitment vendors charge per referral. The site needed a steady flow of patients it didn't have to rent.
+
+**Our Approach**
+
+01. Make organic search the base
+We manage the site's SEO so people searching for paid studies and conditions near them find the site directly. In 2023 organic search brought in more new patients than the largest outside recruitment vendor and every ad channel combined.
+
+02. Text the people who already know you
+Targeted SMS to the existing patient list, one study at a time: COVID-19 (47 new patients), eczema (23) and hypothyroidism (16). It is the lowest-cost enrollment channel a site has.
+
+03. Paid campaigns built per study
+Facebook, Instagram and Google Ads campaigns built around one study each, with plain-language qualifying questions written to platform health-ad rules. Monthly content calendars keep every active study visible.
+
+04. Source tracking end to end
+Every new patient record carries the campaign that produced it, so the team knows which channel fills which study and where to spend next.
+
+**Services delivered:** Patient Recruitment Strategy · SEO · Meta + Google Ads · SMS + Email Nurture · Social Content · Source Tracking + HIPAA Review
+
+---
+
+### 4. START Center for Cancer Research
+- **Slug:** `start-center-for-cancer-research`
+- **Tag:** Clinical Research
+- **Filters:** Clinical Research, Healthcare
+- **Location:** National site network
+- **Engagement date:** November 2024 to present
+- **Card summary:** SEO, paid search, HubSpot automation and AI search visibility for one of the largest community-based early-phase oncology trial networks in the U.S.
+- **Hero metrics:**
+  - `10 → 34` / Ahrefs Domain Rating, October 2024 to October 2026
+  - `1,100+` / New referring domains in two years
+- **Stat tiles:**
+  - `1,300` / More estimated monthly organic visits than two years ago, per Ahrefs
+  - `41` / New top-3 Google rankings (53 today, up from 12)
+  - `10+` / AI automations and workflows configured in HubSpot and beyond
+  - `66 to 82%` / Of email "opens" traced to security bots, so lead scoring was rebuilt
+- **Services (card):** Fractional CMO, SEO, PPC, HubSpot Automation, GEO
+
+**The Challenge**
+START needed to reach two very different buyers: biotech and pharma sponsors choosing where to place trials, and physicians and patients looking for a trial near them. The site had little search authority, email reporting looked healthy but sales activity didn't match it, and AI search engines barely knew START existed beyond "clinical trials near [city]."
+
+**Our Approach**
+
+01. Search authority from the ground up
+We built START's SEO program from a Domain Rating of 10 in October 2024 to 34 today, adding more than 1,100 referring domains along the way. The homepage, investigator profiles and phase pages now rank on their own, and START holds 53 top-3 Google positions, up from 12. Estimated organic traffic grew by about 1,300 monthly visits over the same period. Three Google Ads campaigns, launched in November 2024, cover brand and trials, Performance Max and preclinical research, with form fills reporting back into HubSpot.
+
+02. Fixing what the email numbers meant
+HubSpot's own bot filter flagged 66% to 82% of unique opens on broad physician sends. Opens were measuring email security gateways, not doctors. We took opens out of lead scoring, scored on actions a person has to take, such as visiting trial pages, and built a deliverability plan for physician inboxes.
+
+03. Automation the sales team actually uses
+More than 10 AI automations and workflows now run across marketing and sales. One example: a HubSpot build turns buying signals such as new funding or partnerships into a single email from the account's sales rep. Five signals, five lists, five templates and five workflows, one build serving the whole team.
+
+04. AI search visibility, the next frontier
+We tested real sponsor and patient questions across Google AI Overviews, ChatGPT and Perplexity. START earns citations on location searches but not yet on tumor type, drug or topic searches. The cause: the trial finder holds 847 URLs in its sitemap and none of them are in Google's index. Getting those pages indexed is the current milestone.
+
+**Services delivered:** Fractional CMO · SEO + Link Building · Google + Bing Ads · HubSpot Lead Scoring + Automation · AI Workflows · Email Deliverability · GEO/AEO
+
+---
+
+### 5. Cingo Column Wraps
+- **Slug:** `cingo-column-wraps`
+- **Tag:** B2B
+- **Filters:** B2B
+- **Location:** National
+- **Engagement date:** July 2024 to present
+- **Card summary:** Brand revamp, an expanded website, CRM and LinkedIn outbound for a startup that turns parking garage columns into ad space and protects them at the same time.
+- **Hero metrics:**
+  - `1,100+` / Decision-makers who accepted a LinkedIn connection from Cingo's outbound
+  - `40` / Qualified leads at the booth in a day and a half at the National Parking Association convention
+- **Stat tiles:**
+  - `46.5%` / Connection acceptance rate from Atlanta parking operators, with a 10.7% reply rate
+  - `20` / LinkedIn outbound campaigns, each built for one buyer type
+  - `847` / Convention attendees loaded, tagged and sequenced in the CRM before the show
+  - `1,700` / Contacts in an automated CRM follow-up journey
+- **Services (card):** Brand Development, Website Management, CRM Configuration, LinkedIn Outreach, Email Marketing, Social Media
+
+**The Challenge**
+Cingo sells something most buyers have never considered: advertising on parking garage columns that also protects the concrete. That means selling to parking operators, property managers, developers, hotels and advertisers at once, each with a different reason to care, with a two-person founding team and no marketing department.
+
+**Our Approach**
+
+01. Brand revamp
+We rebuilt the brand around what each buyer gets: ancillary revenue for property owners, column and vehicle protection for operators, and minutes of attention for advertisers. That message now carries the website, sales sheets, conference banners and every post.
+
+02. An expanded website
+We grew the site with pages for advertisers and for asset and vehicle protection, location content for Chicago and Las Vegas, and eight long-form articles that answer the questions buyers ask before they take a meeting.
+
+03. A CRM the founders actually use
+We connected Insightly with separate paths for cold leads and engaged contacts, automatic email capture, and journeys that move people from first touch to conversation without manual follow-up. A 1,700-contact follow-up journey and a 5-email nurture series run on it, with each email linking to a tracked article on the site.
+
+04. Outbound and conference engine
+We have run 20 Dripify campaigns on LinkedIn, each aimed at one buyer: parking operators, hotel brands, malls, mixed-use developers, media buyers, out-of-home ad companies, architects, realtors and car rental companies. More than 1,100 decision-makers have accepted the connection, and the best-performing audience, Atlanta parking operators, accepted at 46.5% and replied at 10.7%. For the National Parking Association convention we loaded and tagged 847 pre-registered attendees in the CRM and sequenced outreach before the doors opened. At the convention, the booth logged 40 qualified leads in a day and a half.
+
+**Services delivered:** Brand Development · Website Management · CRM Configuration (Insightly) · LinkedIn Outreach (Dripify) · Email Marketing · Social Media Management · Content
+
+---
+
+### 6. Canopy Cancer Collective × PanCAN
+- **Slug:** `canopy-cancer-collective`
+- **Tag:** Life Sciences
+- **Filters:** Life Sciences, Healthcare
+- **Location:** National
+- **Engagement date:** June 2026 to December 2026
+- **Card summary:** Marketing consultant support for a Canopy Cancer Collective and PanCAN initiative: a national awareness campaign and expert mini-symposium for the first U.S. consensus statements on exocrine pancreatic insufficiency in pancreatic cancer care. In progress.
+- **Sponsor line (show on the detail page, under the summary, in small type):** This program is made possible with funding support from our sponsor, AbbVie.
+- **Hero metrics:**
+  - `5` / Clinical experts on one program, from UC San Diego, UW / Fred Hutch, University of the Pacific, PanCAN and Canopy
+  - `Oct 29` / Live symposium in 2026, with results reported in December
+- **Stat tiles:**
+  - `1` / Messaging framework that every asset draws from
+  - `4` / LinkedIn posts plus a 7-slide speaker carousel
+  - `2` / Campaign emails
+  - `6` / Clinical disciplines targeted, from oncologists to dietitians and pharmacists
+- **Services (card):** Campaign Strategy, Messaging, LinkedIn, Email, Event Support, Reporting
+
+**The Challenge**
+Canopy and PanCAN released a white paper, "From Overlooked to Essential," that many clinicians hadn't seen. The audience was the full pancreatic cancer care team, each discipline with a different reason to care, and every asset needed medical accuracy, sponsor disclosure and sign-off from two organizations.
+
+**Our Approach**
+
+01. Messaging framework
+Audience segments for each discipline, message pillars, an approved proof-point library and channel rules. Each post and email draws one pillar and one approved statistic, which kept reviews fast and claims consistent.
+
+02. LinkedIn and email
+Four LinkedIn posts in Canopy's brand palette, re-sequenced after client feedback into a speaker carousel and a combined method-and-dose post, plus two emails for Canopy to send.
+
+03. Symposium support
+Agenda, session flow, Q&A guidance, recording and a designed summary brief for "Digesting the Evidence."
+
+04. Measurement
+A dashboard and final report on registrations, white paper downloads, email and social, delivered in early December. Results will be added here once the campaign closes.
+
+**Services delivered:** Marketing Consultant · Campaign Strategy · Messaging Architecture · LinkedIn Creative · Email · Event Support · Analytics + Reporting
+
+---
+
+### 7. Atrium Wallcoverings
+- **Slug:** `atrium-wallcoverings`
+- **Tag:** B2B
+- **Filters:** B2B
+- **Location:** Miami, FL
+- **Engagement date:** 2026
+- **Card summary:** A custom WordPress catalog for a commercial wallcovering supplier, built so the client's own team can publish new patterns the day they arrive.
+- **Hero metrics:**
+  - `123` / Patterns in one searchable catalog
+  - `15 min` / For the client's team to publish a new pattern, no developer needed
+- **Stat tiles:**
+  - `123` / Published patterns, each a structured product with its own images
+  - `18` / Grass cloth collections with their own section by code
+  - `15 min` / Per new pattern, done by the client's team
+  - `1` / Custom theme built from scratch
+- **Services (card):** Web Design, WordPress Development, Client Training
+
+**The Challenge**
+Designers and specifiers judge a wallcovering supplier by how fast they can find and compare a pattern. New collections arrive from mills as raw image files, and Atrium needed to post them without waiting on a developer.
+
+**Our Approach**
+
+01. Custom theme built around the catalog
+Every pattern is a product with structured fields, so search and filtering work the way specifiers shop.
+
+02. Built for self-service
+Content editing sits apart from the theme files, so the team can add patterns without touching how the site is built.
+
+03. Handoff guide
+A plain-English guide covering image prep, drafts, preview, publishing and clearing the host cache, so new collections go live the day they arrive.
+
+**Services delivered:** Web Design · WordPress Development · Content Migration · Client Training
+
+---
+
+### 8. Carevive
+- **Slug:** `carevive` (existing)
+- **Tag:** Digital Health
+- **Filters:** Healthcare
+- **Location:** National
+- **Engagement date:** May 2025
+- **Card summary:** A new website and an ongoing LinkedIn program for an oncology patient experience platform, now Carevive by Health Catalyst.
+- **Hero metrics:**
+  - `5` / Oncology conference cycles covered: ISPOR, ASCO, AONN, ASH and SABCS
+  - `2` / Buyer audiences served by one website: oncology clinicians and health system leaders
+- **Stat tiles:**
+  - `1` / Website rebuilt from the ground up
+  - `5` / Conference cycles with pre-event, live and recap content
+  - `2` / Audiences, each with its own path through the site
+  - `Monthly` / LinkedIn content calendar
+- **Services (card):** LinkedIn Marketing, Web Design, Website Development
+
+**The Challenge**
+Carevive builds clinically validated technology that improves the treatment experience for people with cancer. Its digital presence didn't reflect the strength of the product or its evidence. The website was outdated, LinkedIn activity was minimal, and there was no consistent voice to build trust with health system buyers in a long, relationship-driven sales cycle.
+
+**Our Approach**
+
+01. Website redesign and development
+A new site, built to work on every device, for two audiences at once: oncology clinicians evaluating clinical evidence, and health system leaders evaluating cost and implementation. Live at carevive.com.
+
+02. LinkedIn program
+A monthly content calendar combining clinical thought leadership, outcome storytelling, conference presence and company culture.
+
+03. Conference content
+A repeatable workflow for each conference: awareness posts before the event, live coverage during it and recaps after it.
+
+04. Outcome-led messaging
+Messaging that leads with what health system buyers ask about: patient experience, outcomes and cost, rather than product features.
+
+**Services delivered:** LinkedIn Marketing · Web Design · Website Development
+
+---
+
+### 9. Purpose Life Sciences
+- **Slug:** `purpose-life-sciences` (existing)
+- **Tag:** Life Sciences
+- **Filters:** Life Sciences, Clinical Research
+- **Location:** Global
+- **Engagement date:** 2024 to 2025
+- **Card summary:** A new website, original visuals and an ongoing LinkedIn program for an Impact Research Organization working to make clinical trials easier to access and faster to run.
+- **Hero metrics:**
+  - `1` / New WordPress website built around the mission and the method
+  - `2` / Audiences served by one site: biopharma sponsors and scientific collaborators
+- **Stat tiles:**
+  - `2` / Audiences, each with a clear path through the site
+  - `4` / Content hubs: services, news, publications and thought leadership
+  - `Original` / Video and AI-assisted visuals in place of stock photography
+  - `Ongoing` / LinkedIn content program
+- **Services (card):** Fractional CMO, LinkedIn Marketing, Web Design, Website Development
+
+**The Challenge**
+Purpose Life Sciences had a strong vision for clinical trials: more access for patients, less burden on patients and providers, and faster, more cost-efficient drug development. Its digital presence didn't show it. The site didn't explain its approach to trial design, and LinkedIn, its main channel for reaching biopharma sponsors, was underused.
+
+**Our Approach**
+
+01. Website redesign and development
+A new WordPress site that leads with the mission and the method, organized so services, news, publications and thought leadership each have a clear home.
+
+02. Original visuals
+Video content and original imagery, including carefully prompted AI-generated visuals, so the site looks like the organization rather than a stock library.
+
+03. LinkedIn program
+An ongoing content program covering trial thought leadership, team spotlights and conference presence, aimed at sponsor and CRO decision-makers.
+
+04. Fractional CMO strategy
+Marketing aligned with business development, so content supported the partnership conversations already underway.
+
+**Services delivered:** Fractional CMO · LinkedIn Marketing · Web Design · Website Development
+
+---
+
+## More Website Builds (row below the grid)
+
+Four small cards. No detail pages, no metrics.
+
+- **3D MedSupply & Manufacturing**
+  A new WordPress website and LinkedIn marketing for a U.S. manufacturer of viral transport media and specimen collection kits, founded to ease shortages of COVID-19 testing supplies.
+  Services: Web Design · Website Development · LinkedIn Marketing
+
+- **Vascular Simulations**
+  Website design and development, with ongoing support as an extension of the client's marketing team.
+  Services: Web Design · Website Development
+
+- **Infinity Medical Education**
+  A new website for a medical education business, including the email and social tools behind it.
+  Services: Web Design · Website Development · Email + Social Setup
+
+- **ToneyBands**
+  Inbound marketing, social media, lead acquisition and e-commerce support, plus design, photography and tech support.
+  Services: Inbound Marketing · Social Media · E-commerce · Photography

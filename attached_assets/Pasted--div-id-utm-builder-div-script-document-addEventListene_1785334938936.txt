@@ -1,0 +1,133 @@
+<div id="utm-builder"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Create and insert styles
+    const style = document.createElement('style');
+    style.textContent = `
+        #utm-builder {
+            max-width: 100%;
+            margin: 20px auto;
+            font-family: inherit;
+        }
+        #utm-builder label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600 !important;
+        }
+        #utm-builder input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        #utm-builder button {
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        #utm-builder button:hover {
+            background-color: #005177;
+        }
+        #utm-builder .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #0073aa;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            word-wrap: break-word;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #utm-builder .copy-btn {
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            margin-left: 10px;
+        }
+        #utm-builder .copy-btn:hover {
+            background-color: #005177;
+        }
+    `;
+    document.head.append(style);
+
+    // Create and insert HTML structure
+    const container = document.getElementById('utm-builder');
+    container.innerHTML = `
+        <div class="utm-form">
+          
+            <form id="utmForm">
+                <label for="baseURL">Base URL*</label>
+                <input type="url" id="baseURL" placeholder="https://example.com" required>
+                
+                <label for="utmSource">UTM Source*</label>
+                <input type="text" id="utmSource" placeholder="google" required>
+                
+                <label for="utmMedium">UTM Medium*</label>
+                <input type="text" id="utmMedium" placeholder="cpc" required>
+                
+                <label for="utmCampaign">UTM Campaign*</label>
+                <input type="text" id="utmCampaign" placeholder="summer_sale" required>
+                
+                <label for="utmTerm">UTM Term (optional)</label>
+                <input type="text" id="utmTerm" placeholder="running_shoes">
+                
+                <label for="utmContent">UTM Content (optional)</label>
+                <input type="text" id="utmContent" placeholder="ad1">
+                
+                <button type="submit">Generate UTM URL</button>
+            </form>
+            <div class="result" id="result" style="display:none;">
+                <div id="utmURL"></div>
+                <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+            </div>
+        </div>
+    `;
+
+    // Add JavaScript functionality
+    document.getElementById('utmForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const baseURL = document.getElementById('baseURL').value;
+        const utmSource = document.getElementById('utmSource').value;
+        const utmMedium = document.getElementById('utmMedium').value;
+        const utmCampaign = document.getElementById('utmCampaign').value;
+        const utmTerm = document.getElementById('utmTerm').value;
+        const utmContent = document.getElementById('utmContent').value;
+        
+        let utmURL = `${baseURL}?utm_source=${encodeURIComponent(utmSource)}&utm_medium=${encodeURIComponent(utmMedium)}&utm_campaign=${encodeURIComponent(utmCampaign)}`;
+        
+        if (utmTerm) {
+            utmURL += `&utm_term=${encodeURIComponent(utmTerm)}`;
+        }
+        
+        if (utmContent) {
+            utmURL += `&utm_content=${encodeURIComponent(utmContent)}`;
+        }
+        
+        document.getElementById('utmURL').textContent = utmURL;
+        document.getElementById('result').style.display = 'flex';
+    });
+
+    // Function to copy the generated UTM URL to clipboard
+    window.copyToClipboard = function() {
+        const utmURL = document.getElementById('utmURL').textContent;
+        navigator.clipboard.writeText(utmURL).then(function() {
+            alert('Copied to clipboard!');
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    };
+});
+</script>

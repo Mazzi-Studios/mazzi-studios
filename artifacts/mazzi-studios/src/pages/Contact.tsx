@@ -1,22 +1,10 @@
-import { useState } from 'react';
 import { Head } from '@/components/seo/Head';
 import { FadeUp } from '@/components/animations/FadeUp';
-import { Mail, MapPin, Linkedin, CheckCircle2 } from 'lucide-react';
+import { CalendlyEmbed } from '@/components/CalendlyEmbed';
+import { ContactForm } from '@/components/ContactForm';
+import { Mail, MapPin, Linkedin } from 'lucide-react';
 
 export default function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 1500);
-  };
-
   return (
     <div className="w-full bg-[#080810]">
       <Head
@@ -45,116 +33,35 @@ export default function Contact() {
       {/* Main Content */}
       <section className="py-24 bg-[#0D0D1A] border-t border-white/5">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto items-start">
             
-            {/* Form Column */}
-            <FadeUp>
-              <div className="bg-[#0F0F1C] p-8 md:p-12 border border-[#EB2571]/15">
-                
-                {isSuccess ? (
-                  <div className="text-center py-12 flex flex-col items-center justify-center">
-                    <div className="h-16 w-16 border border-[#EB2571] text-[#EB2571] flex items-center justify-center mb-6">
-                      <CheckCircle2 size={32} />
-                    </div>
-                    <h3 className="text-[24px] font-bold text-[#F5F0EB] mb-4">Message Sent!</h3>
-                    <p className="text-[#cfcfcf] mb-8 font-sans">Thanks for reaching out. We'll be in touch within 24 hours.</p>
-                    <button 
-                      onClick={() => setIsSuccess(false)} 
-                      className="bg-transparent border border-[#EB2571]/35 text-[#EB2571] px-6 py-4 font-bold uppercase tracking-widest text-xs hover:bg-[#EB2571]/5 transition-colors"
-                    >
-                      Send Another Message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <label htmlFor="name" className="text-[11px] font-bold text-[#F5F0EB] uppercase tracking-widest">Full Name *</label>
-                        <input 
-                          id="name" 
-                          required 
-                          placeholder="Jane Doe" 
-                          className="w-full bg-[#080810] border border-[#EB2571]/20 text-[#F5F0EB] placeholder:text-[#cfcfcf] px-4 py-3 focus:outline-none focus:border-[#EB2571] font-sans text-sm" 
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <label htmlFor="email" className="text-[11px] font-bold text-[#F5F0EB] uppercase tracking-widest">Email Address *</label>
-                        <input 
-                          id="email" 
-                          type="email" 
-                          required 
-                          placeholder="jane@company.com" 
-                          className="w-full bg-[#080810] border border-[#EB2571]/20 text-[#F5F0EB] placeholder:text-[#cfcfcf] px-4 py-3 focus:outline-none focus:border-[#EB2571] font-sans text-sm" 
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <label htmlFor="company" className="text-[11px] font-bold text-[#F5F0EB] uppercase tracking-widest">Company</label>
-                        <input 
-                          id="company" 
-                          placeholder="Acme Corp" 
-                          className="w-full bg-[#080810] border border-[#EB2571]/20 text-[#F5F0EB] placeholder:text-[#cfcfcf] px-4 py-3 focus:outline-none focus:border-[#EB2571] font-sans text-sm" 
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <label htmlFor="phone" className="text-[11px] font-bold text-[#F5F0EB] uppercase tracking-widest">Phone (optional)</label>
-                        <input 
-                          id="phone" 
-                          type="tel" 
-                          placeholder="(555) 123-4567" 
-                          className="w-full bg-[#080810] border border-[#EB2571]/20 text-[#F5F0EB] placeholder:text-[#cfcfcf] px-4 py-3 focus:outline-none focus:border-[#EB2571] font-sans text-sm" 
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <label htmlFor="interest" className="text-[11px] font-bold text-[#F5F0EB] uppercase tracking-widest">Service Interest</label>
-                      <select 
-                        id="interest"
-                        className="w-full bg-[#080810] border border-[#EB2571]/20 text-[#F5F0EB] px-4 py-3 focus:outline-none focus:border-[#EB2571] font-sans text-sm appearance-none"
-                      >
-                        <option value="cmo">Fractional CMO</option>
-                        <option value="ai">AI Automation</option>
-                        <option value="web">Website Development</option>
-                        <option value="linkedin">LinkedIn Marketing</option>
-                        <option value="ppc">PPC Management</option>
-                        <option value="sprint">Strategy Sprint</option>
-                        <option value="other">Other / Not Sure</option>
-                      </select>
-                    </div>
-
-                    <div className="space-y-3">
-                      <label htmlFor="message" className="text-[11px] font-bold text-[#F5F0EB] uppercase tracking-widest">Message *</label>
-                      <textarea 
-                        id="message" 
-                        required 
-                        placeholder="Tell us a bit about your current marketing challenges..." 
-                        className="w-full min-h-[120px] bg-[#080810] border border-[#EB2571]/20 text-[#F5F0EB] placeholder:text-[#cfcfcf] px-4 py-3 focus:outline-none focus:border-[#EB2571] font-sans text-sm resize-y"
-                      />
-                    </div>
-
-                    <button 
-                      type="submit" 
-                      disabled={isSubmitting} 
-                      className="w-full bg-[#EB2571] text-white px-6 py-4 font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity disabled:opacity-50 mt-4"
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </button>
-                  </form>
-                )}
+            {/* Booking Column */}
+            <FadeUp className="lg:col-span-3">
+              <div className="bg-[#0F0F1C] border border-[#EB2571]/15">
+                <div className="p-6 md:p-8 pb-2 md:pb-2">
+                  <span className="text-[11px] uppercase tracking-[0.12em] text-[#EB2571] font-sans">BOOK YOUR CALL</span>
+                  <h2 className="text-[36px] md:text-[48px] font-bold text-[#F5F0EB] tracking-tight mt-3 mb-3">Choose a Time</h2>
+                  <p className="text-[#cfcfcf] font-sans leading-relaxed">
+                    Select a time for a free 30-minute strategy conversation.
+                  </p>
+                </div>
+                <CalendlyEmbed />
               </div>
             </FadeUp>
 
-            {/* Booking & Info Column */}
-            <div>
+            {/* Email & Info Column */}
+            <div className="lg:col-span-2">
               <FadeUp delay={0.1} className="mb-10">
-                <div className="bg-[#0F0F1C] border border-[#EB2571]/15 overflow-hidden flex flex-col items-center justify-center p-12 min-h-[300px]">
-                  <p className="text-[16px] text-[#cfcfcf] font-sans mb-4">Loading calendar...</p>
-                  <a href="https://calendly.com/mazzistudios" target="_blank" rel="noopener noreferrer" className="text-[#EB2571] font-bold uppercase tracking-widest text-[12px] hover:underline">
-                    https://calendly.com/mazzistudios
-                  </a>
+                <div className="bg-[#0F0F1C] border border-[#EB2571]/15 p-8">
+                  <Mail size={28} className="text-[#EB2571] mb-6" />
+                  <h3 className="text-[26px] text-[#F5F0EB] mb-3">Prefer to Write?</h3>
+                  <p className="text-[#cfcfcf] font-sans leading-relaxed mb-6">
+                    Have a question or an introduction? Send Ricardo a message and we’ll get back to you.
+                  </p>
+                  <ContactForm />
+                  <p className="mt-6 text-[#cfcfcf] font-sans text-sm">
+                    Or email directly: <a href="mailto:ricardo@mazzistudios.com" className="text-[#EB2571] hover:underline">ricardo@mazzistudios.com</a>
+                  </p>
                 </div>
               </FadeUp>
 
@@ -164,7 +71,7 @@ export default function Contact() {
                     <Mail size={20} className="text-[#EB2571] shrink-0" />
                     <div>
                       <h4 className="text-[11px] font-bold text-[#cfcfcf] uppercase tracking-widest mb-1">Email</h4>
-                      <a href="mailto:team@mazzistudios.com" className="text-[15px] font-medium text-[#F5F0EB] hover:text-[#EB2571]">team@mazzistudios.com</a>
+                      <a href="mailto:ricardo@mazzistudios.com" className="text-[15px] font-medium text-[#F5F0EB] hover:text-[#EB2571]">ricardo@mazzistudios.com</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-6 border-b border-[#EB2571]/15">

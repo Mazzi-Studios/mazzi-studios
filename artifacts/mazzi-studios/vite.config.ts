@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, type Plugin } from 'vite';
 
 import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
+import portfolioRedirects from './src/data/portfolioRedirects.json';
 
 const rawPort = process.env.PORT;
 
@@ -27,23 +28,56 @@ if (!basePath) {
   );
 }
 
-const noEmDashPlugin: Plugin = {
-  name: 'mazzi-no-em-dashes',
+const normalizePunctuation = (code: string) =>
+  code.replace(/[\u2013\u2014]|&(?:mdash|ndash);|&#(?:8211|8212);|&#x201[34];/gi, ' - ');
+
+const noTypographicDashesPlugin: Plugin = {
+  name: 'mazzi-no-typographic-dashes',
   enforce: 'pre',
   transform(code, id) {
-    if (id.includes('/src/') && /\.[cm]?[jt]sx?$|\.css$/.test(id) && code.includes('—')) {
+    if (id.includes('/src/') && /\.[cm]?[jt]sx?$|\.css$/.test(id)) {
+      const normalized = normalizePunctuation(code);
+      if (normalized === code) return;
       return {
-        code: code.replaceAll('—', ' - '),
+        code: normalized,
         map: null,
       };
     }
+  },
+  transformIndexHtml(html) {
+    return normalizePunctuation(html);
+  },
+};
+
+const portfolioRedirectPlugin: Plugin = {
+  name: 'mazzi-portfolio-redirects',
+  configureServer(server) {
+    server.middlewares.use((req, res, next) => {
+      const url = new URL(req.url ?? '/', 'http://localhost');
+      const route = url.pathname.replace(/\/$/, '') || '/';
+      const target = portfolioRedirects[route as keyof typeof portfolioRedirects];
+      if (!target) return next();
+      res.writeHead(301, { Location: `${target}${url.search}` });
+      res.end();
+    });
+  },
+  configurePreviewServer(server) {
+    server.middlewares.use((req, res, next) => {
+      const url = new URL(req.url ?? '/', 'http://localhost');
+      const route = url.pathname.replace(/\/$/, '') || '/';
+      const target = portfolioRedirects[route as keyof typeof portfolioRedirects];
+      if (!target) return next();
+      res.writeHead(301, { Location: `${target}${url.search}` });
+      res.end();
+    });
   },
 };
 
 export default defineConfig({
   base: basePath,
   plugins: [
-    noEmDashPlugin,
+    noTypographicDashesPlugin,
+    portfolioRedirectPlugin,
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),

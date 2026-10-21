@@ -23,8 +23,8 @@ for (const route of prerenderRoutes) {
   if (html.includes('<div id="root"></div>')) {
     throw new Error(`${file} contains an empty app root`);
   }
-  if (html.includes('—')) {
-    throw new Error(`${file} contains a disallowed em dash`);
+  if (/[\u2013\u2014]|&(?:mdash|ndash);|&#(?:8211|8212);|&#x201[34];/i.test(html)) {
+    throw new Error(`${file} contains a disallowed typographic dash`);
   }
   const expectedCanonical = route.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${route.path}`;
   if (!html.includes(`rel="canonical" href="${expectedCanonical}"`)) {
